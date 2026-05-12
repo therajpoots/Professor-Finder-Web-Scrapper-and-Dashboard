@@ -33,6 +33,22 @@ class ScraperHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(json.dumps({"status": "started"}).encode())
             return
             
+        if url.path == "/status.json":
+            status_path = os.path.join(RESULTS_DIR, "status.json")
+            if os.path.exists(status_path):
+                self.send_response(200)
+                self.send_header("Content-type", "application/json")
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                with open(status_path, "rb") as f:
+                    self.wfile.write(f.read())
+                return
+            else:
+                self.send_response(404)
+                self.end_headers()
+                self.wfile.write(b"Status file not found yet.")
+                return
+            
         # Serve the dashboard at root
         if self.path == "/" or self.path == "":
             if os.path.exists(DASHBOARD_PATH):
