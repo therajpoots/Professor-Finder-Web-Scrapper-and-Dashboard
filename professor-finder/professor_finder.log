@@ -4126,3 +4126,514 @@ PHASE 4: Generating reports...
 19:04:01 [INFO] CSV exported: d:\Games\professor-finder\results\professors_data.csv (297 professors)
 19:04:01 [INFO] 
 DONE!
+19:51:59 [INFO] ============================================================
+19:51:59 [INFO] AdvisorScout v2 - Starting
+19:51:59 [INFO] ============================================================
+19:51:59 [INFO] Loaded 1829 professors from cache
+19:51:59 [INFO] PHASE 1: Scraping faculty directories...
+19:51:59 [INFO] 
+[1/88] Scraping: University of Toledo - EECS
+19:52:02 [INFO]   Found 1 faculty entries from University of Toledo
+19:52:02 [INFO] Cache saved: 1829 professors
+19:52:02 [INFO] 
+[2/88] Scraping: University of Delaware - ECE
+19:52:03 [INFO]   Found 59 faculty entries from University of Delaware
+19:52:03 [INFO] Cache saved: 1829 professors
+19:52:03 [INFO] 
+[3/88] Scraping: University of Illinois Chicago - ECE
+19:52:04 [WARNING] Failed to fetch https://ece.uic.edu/profiles/faculty/: 403 Client Error: Forbidden for url: https://ece.uic.edu/profiles/faculty/
+19:52:04 [INFO] Cache saved: 1829 professors
+19:52:04 [INFO] 
+[4/88] Scraping: University of Houston - ECE
+19:52:07 [INFO]   Found 54 faculty entries from University of Houston
+19:52:07 [INFO] Cache saved: 1829 professors
+19:52:07 [INFO] 
+[5/88] Scraping: University of Kentucky - ECE
+19:52:10 [INFO]   Found 0 faculty entries from University of Kentucky
+19:52:10 [INFO] Cache saved: 1829 professors
+19:52:10 [INFO] 
+[6/88] Scraping: University of Miami - ECE
+19:52:14 [WARNING] Failed to fetch https://coe.miami.edu/academics/electrical-computer-engineering/faculty/index.html: 404 Client Error: Not Found for url: https://www.coe.miami.edu/academics/electrical-computer-engineering/faculty/index.html
+19:52:14 [INFO] Cache saved: 1829 professors
+19:52:14 [INFO] 
+[7/88] Scraping: NJIT - ECE
+19:52:15 [WARNING] Failed to fetch https://ece.njit.edu/faculty: 404 Client Error: Not Found for url: https://ece.njit.edu/faculty
+19:52:15 [INFO] Cache saved: 1829 professors
+19:52:15 [INFO] 
+[8/88] Scraping: Illinois Institute of Technology - ECE
+19:52:17 [WARNING] Failed to fetch https://www.iit.edu/ece/people/faculty: 404 Client Error: Not Found for url: https://www.iit.edu/ece/people/faculty
+19:52:17 [INFO] Cache saved: 1829 professors
+19:52:17 [INFO] 
+[9/88] Scraping: University of North Texas - EE
+19:52:21 [INFO]   Found 6 faculty entries from University of North Texas
+19:52:22 [INFO] Cache saved: 1829 professors
+19:52:22 [INFO] 
+[10/88] Scraping: University of South Florida - EE
+19:52:25 [INFO]   Found 0 faculty entries from University of South Florida
+19:52:25 [INFO] Cache saved: 1829 professors
+19:52:25 [INFO] 
+[11/88] Scraping: Cleveland State University - ECE
+19:52:27 [WARNING] Failed to fetch https://engineering.csuohio.edu/ece/faculty-and-staff: 404 Client Error: Not Found for url: https://engineering.csuohio.edu/ece/faculty-and-staff
+19:52:27 [INFO] Cache saved: 1829 professors
+19:52:27 [INFO] 
+[12/88] Scraping: University of Akron - ECE
+19:52:28 [WARNING] Failed to fetch https://www.uakron.edu/engineering/ECE/faculty-staff/: 404 Client Error: Not Found for url: https://www.uakron.edu/engineering/ECE/faculty-staff/
+19:52:28 [INFO] Cache saved: 1829 professors
+19:52:28 [INFO] 
+[13/88] Scraping: Wichita State University - EECS
+19:52:29 [INFO]   Found 0 faculty entries from Wichita State University
+19:52:29 [INFO] Cache saved: 1829 professors
+19:52:29 [INFO] 
+[14/88] Scraping: University of Memphis - EE
+19:52:30 [WARNING] Failed to fetch https://www.memphis.edu/ee/faculty/index.php: 404 Client Error: Not Found for url: https://www.memphis.edu/ee/faculty/
+19:52:31 [INFO] Cache saved: 1829 professors
+19:52:31 [INFO] 
+[15/88] Scraping: Louisiana Tech University - EE
+19:52:34 [INFO]   Found 0 faculty entries from Louisiana Tech University
+19:52:34 [INFO] Cache saved: 1829 professors
+19:52:34 [INFO] 
+[16/88] Scraping: University of Arkansas - EECS
+19:52:37 [INFO]   Found 3 faculty entries from University of Arkansas
+19:52:37 [INFO] Cache saved: 1829 professors
+19:52:37 [INFO] 
+[17/88] Scraping: University of Nevada, Reno - ECE
+19:52:39 [WARNING] Failed to fetch https://www.unr.edu/ece/people: 404 Client Error: Not Found for url: https://www.unr.edu/ece/people
+19:52:39 [INFO] Cache saved: 1829 professors
+19:52:39 [INFO] 
+[18/88] Scraping: University of South Alabama - ECE
+19:52:40 [WARNING] Failed to fetch https://www.southalabama.edu/colleges/engineering/ece/faculty.html: 404 Client Error: Not Found for url: https://www.southalabama.edu/colleges/engineering/ece/faculty.html
+19:52:40 [INFO] Cache saved: 1829 professors
+19:52:40 [INFO] 
+[19/88] Scraping: North Dakota State University - ECE
+19:52:44 [INFO]   Found 0 faculty entries from North Dakota State University
+19:52:44 [INFO] Cache saved: 1829 professors
+19:52:44 [INFO] 
+[20/88] Scraping: South Dakota School of Mines - ECE
+19:52:45 [WARNING] Failed to fetch https://www.sdsmt.edu/Academics/Departments/Electrical-Engineering/Faculty-and-Staff/: 404 Client Error: Not Found for url: https://www.sdsmt.edu/Academics/Departments/Electrical-Engineering/Faculty-and-Staff/
+19:52:45 [INFO] Cache saved: 1829 professors
+19:52:45 [INFO] 
+[21/88] Scraping: University of Maine - ECE
+19:52:49 [WARNING] Failed to fetch https://ece.umaine.edu/faculty-and-staff/: 404 Client Error: Not Found for url: https://mcec.umaine.edu/depts/ece/faculty-and-staff/
+19:52:49 [INFO] Cache saved: 1829 professors
+19:52:49 [INFO] 
+[22/88] Scraping: University of Wyoming - EECS
+19:52:51 [INFO]   Found 0 faculty entries from University of Wyoming
+19:52:51 [INFO] Cache saved: 1829 professors
+19:52:51 [INFO] 
+[23/88] Scraping: Montana State University - ECE
+19:52:54 [WARNING] Failed to fetch https://www.montana.edu/ece/directory/faculty.html: 404 Client Error: Not Found for url: https://ece.montana.edu/directory/faculty.html
+19:52:54 [INFO] Cache saved: 1829 professors
+19:52:54 [INFO] 
+[24/88] Scraping: University of Idaho - ECE
+19:52:57 [INFO]   Found 0 faculty entries from University of Idaho
+19:52:57 [INFO] Cache saved: 1829 professors
+19:52:57 [INFO] 
+[25/88] Scraping: New Mexico Tech - EE
+19:52:58 [WARNING] Failed to fetch https://www.nmt.edu/academics/ee/faculty.php: 404 Client Error: Not Found for url: https://www.nmt.edu/academics/ee/faculty.php
+19:52:58 [INFO] Cache saved: 1829 professors
+19:52:58 [INFO] 
+[26/88] Scraping: University of North Dakota - EE
+19:52:59 [INFO]   Found 0 faculty entries from University of North Dakota
+19:53:00 [INFO] Cache saved: 1829 professors
+19:53:00 [INFO] 
+[27/88] Scraping: East Carolina University - ECE
+19:53:00 [INFO]   Found 1 faculty entries from East Carolina University
+19:53:00 [INFO] Cache saved: 1829 professors
+19:53:00 [INFO] 
+[28/88] Scraping: Old Dominion University - ECE
+19:53:02 [INFO]   Found 0 faculty entries from Old Dominion University
+19:53:02 [INFO] Cache saved: 1829 professors
+19:53:02 [INFO] 
+[29/88] Scraping: University of Texas at San Antonio - ECE
+19:53:03 [WARNING] Failed to fetch https://engineering.utsa.edu/electrical-computer/faculty/: HTTPSConnectionPool(host='engineering.utsa.edu', port=443): Max retries exceeded with url: /electrical-computer/faculty/ (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'engineering.utsa.edu'. (_ssl.c:1000)")))
+19:53:03 [INFO] Cache saved: 1829 professors
+19:53:03 [INFO] 
+[30/88] Scraping: Texas Tech University - ECE
+19:53:04 [WARNING] Failed to fetch https://www.depts.ttu.edu/ece/faculty/: HTTPSConnectionPool(host='www.depts.ttu.edu', port=443): Max retries exceeded with url: /ece/faculty/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+19:53:04 [INFO] Cache saved: 1829 professors
+19:53:04 [INFO] 
+[31/88] Scraping: University of Alabama at Birmingham - ECE
+19:53:05 [INFO]   Found 13 faculty entries from University of Alabama at Birmingham
+19:53:05 [INFO] Cache saved: 1829 professors
+19:53:05 [INFO] 
+[32/88] Scraping: UA Huntsville - ECE
+19:53:08 [INFO]   Found 0 faculty entries from UA Huntsville
+19:53:08 [INFO] Cache saved: 1829 professors
+19:53:08 [INFO] 
+[33/88] Scraping: University of Cincinnati - ECE
+19:53:11 [INFO]   Found 7 faculty entries from University of Cincinnati
+19:53:11 [INFO] Cache saved: 1829 professors
+19:53:11 [INFO] 
+[34/88] Scraping: Wright State University - EE
+19:53:13 [WARNING] Failed to fetch https://engineering-computer-science.wright.edu/electrical-engineering/faculty-and-staff: 404 Client Error: Not Found for url: https://engineering-computer-science.wright.edu/electrical-engineering/faculty-and-staff
+19:53:13 [INFO] Cache saved: 1829 professors
+19:53:13 [INFO] 
+[35/88] Scraping: University of Massachusetts Lowell - ECE
+19:53:13 [WARNING] Failed to fetch https://www.uml.edu/engineering/electrical-computer/faculty-staff/: 404 Client Error: Not Found for url: https://www.uml.edu/engineering/electrical-computer/faculty-staff/
+19:53:13 [INFO] Cache saved: 1829 professors
+19:53:13 [INFO] 
+[36/88] Scraping: Rochester Institute of Technology - ECE
+19:53:15 [INFO]   Found 14 faculty entries from Rochester Institute of Technology
+19:53:15 [INFO] Cache saved: 1829 professors
+19:53:15 [INFO] 
+[37/88] Scraping: University of Central Florida - ECE
+19:53:17 [INFO]   Found 45 faculty entries from University of Central Florida
+19:53:18 [INFO] Cache saved: 1829 professors
+19:53:18 [INFO] 
+[38/88] Scraping: Florida Institute of Technology - ECE
+19:53:19 [WARNING] Failed to fetch https://www.fit.edu/electrical-computer-engineering/faculty-profiles/: 404 Client Error: Not Found for url: https://www.fit.edu/electrical-computer-engineering/faculty-profiles/
+19:53:19 [INFO] Cache saved: 1829 professors
+19:53:19 [INFO] 
+[39/88] Scraping: University of Rhode Island - ECBE
+19:53:20 [INFO]   Found 3 faculty entries from University of Rhode Island
+19:53:20 [INFO] Cache saved: 1829 professors
+19:53:20 [INFO] 
+[40/88] Scraping: University of Vermont - EBE
+19:53:22 [WARNING] Failed to fetch https://www.uvm.edu/cems/ee/faculty: 404 Client Error: Not Found for url: https://www.uvm.edu/cems/ee/faculty
+19:53:22 [INFO] Cache saved: 1829 professors
+19:53:22 [INFO] 
+[41/88] Scraping: University of Nebraska-Lincoln - ECE
+19:53:24 [WARNING] Failed to fetch https://engineering.unl.edu/ece/faculty/: 404 Client Error: Not Found for url: https://engineering.unl.edu/ece/faculty/
+19:53:24 [INFO] Cache saved: 1829 professors
+19:53:24 [INFO] 
+[42/88] Scraping: Oklahoma State University - ECE
+19:53:25 [WARNING] Failed to fetch https://ceat.okstate.edu/ece/faculty.html: 403 Client Error: Forbidden for url: https://ceat.okstate.edu/ece/faculty.html
+19:53:25 [INFO] Cache saved: 1829 professors
+19:53:25 [INFO] 
+[43/88] Scraping: Kansas State University - ECE
+19:53:27 [INFO]   Found 8 faculty entries from Kansas State University
+19:53:27 [INFO] Cache saved: 1829 professors
+19:53:27 [INFO] 
+[44/88] Scraping: University of Missouri - EECS
+19:53:29 [INFO]   Found 20 faculty entries from University of Missouri
+19:53:29 [INFO] Cache saved: 1829 professors
+19:53:29 [INFO] 
+[45/88] Scraping: Missouri S&T - ECE
+19:53:31 [WARNING] Failed to fetch https://ece.mst.edu/facultyandstaff/: 404 Client Error: Not Found for url: https://ece.mst.edu/facultyandstaff/
+19:53:31 [INFO] Cache saved: 1829 professors
+19:53:31 [INFO] 
+[46/88] Scraping: UNLV - ECE
+19:53:32 [WARNING] Failed to fetch https://www.unlv.edu/ece/people/faculty: 404 Client Error: Not Found for url: https://www.unlv.edu/ece/people/faculty
+19:53:32 [INFO] Cache saved: 1829 professors
+19:53:32 [INFO] 
+[47/88] Scraping: Portland State University - ECE
+19:53:35 [INFO]   Found 1 faculty entries from Portland State University
+19:53:35 [INFO] Cache saved: 1829 professors
+19:53:35 [INFO] 
+[48/88] Scraping: University of Texas at Arlington - EE
+19:53:37 [WARNING] Failed to fetch https://www.uta.edu/academics/schools-colleges/engineering/departments/electrical/people/faculty: 404 Client Error: Not Found for url: https://www.uta.edu/academics/schools-colleges/engineering/departments/electrical/people/faculty
+19:53:37 [INFO] Cache saved: 1829 professors
+19:53:37 [INFO] 
+[49/88] Scraping: University of Colorado Denver - EE
+19:53:38 [WARNING] Failed to fetch https://engineering.ucdenver.edu/electrical/faculty-staff: 404 Client Error: Not Found for url: https://engineering.ucdenver.edu/departments/electrical-engineering/faculty-staff
+19:53:38 [INFO] Cache saved: 1829 professors
+19:53:38 [INFO] 
+[50/88] Scraping: Northern Arizona University - SICCS
+19:53:40 [WARNING] Failed to fetch https://nau.edu/siccs/faculty-and-staff/: 404 Client Error: Not Found for url: https://nau.edu/siccs/faculty-and-staff/
+19:53:40 [INFO] Cache saved: 1829 professors
+19:53:40 [INFO] 
+[51/88] Scraping: Utah State University - ECE
+19:53:41 [WARNING] Failed to fetch https://ece.usu.edu/people/faculty/index: HTTPSConnectionPool(host='ece.usu.edu', port=443): Max retries exceeded with url: /people/faculty/index (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')))
+19:53:41 [INFO] Cache saved: 1829 professors
+19:53:41 [INFO] 
+[52/88] Scraping: Binghamton University - ECE
+19:53:42 [WARNING] Failed to fetch https://www.binghamton.edu/ece/people/faculty.html: 404 Client Error: Not Found for url: https://www.binghamton.edu/electrical-computer-engineering/people/faculty.html
+19:53:43 [INFO] Cache saved: 1829 professors
+19:53:43 [INFO] 
+[53/88] Scraping: Wayne State University - ECE
+19:53:45 [INFO]   Found 1 faculty entries from Wayne State University
+19:53:45 [INFO] Cache saved: 1829 professors
+19:53:45 [INFO] 
+[54/88] Scraping: Florida International University - ECE
+19:53:48 [INFO]   Found 0 faculty entries from Florida International University
+19:53:48 [INFO] Cache saved: 1829 professors
+19:53:48 [INFO] 
+[55/88] Scraping: George Mason University - ECE
+19:53:49 [WARNING] Failed to fetch https://ece.gmu.edu/faculty-directory/: 404 Client Error: Not Found for url: https://ece.gmu.edu/faculty-directory/
+19:53:49 [INFO] Cache saved: 1829 professors
+19:53:49 [INFO] 
+[56/88] Scraping: University of New Mexico - ECE
+19:53:52 [INFO]   Found 0 faculty entries from University of New Mexico
+19:53:52 [INFO] Cache saved: 1829 professors
+19:53:52 [INFO] 
+[57/88] Scraping: Oregon State University - EECS
+19:53:55 [INFO]   Found 0 faculty entries from Oregon State University
+19:53:55 [INFO] Cache saved: 1829 professors
+19:53:55 [INFO] 
+[58/88] Scraping: Florida State University - ECE
+19:53:57 [INFO]   Found 43 faculty entries from Florida State University
+19:53:57 [INFO] Cache saved: 1829 professors
+19:53:57 [INFO] 
+[59/88] Scraping: University at Buffalo - EE
+19:53:58 [WARNING] Failed to fetch https://engineering.buffalo.edu/electrical/people/faculty-directory.html: 404 Client Error: Not Found for url: https://engineering.buffalo.edu/electrical/people/faculty-directory.html
+19:53:58 [INFO] Cache saved: 1829 professors
+19:53:58 [INFO] 
+[60/88] Scraping: UC Riverside - ECE
+19:54:00 [WARNING] Failed to fetch https://www.ece.ucr.edu/people/faculty: 404 Client Error: Not Found for url: https://ece.ucr.edu/people/faculty
+19:54:00 [INFO] Cache saved: 1829 professors
+19:54:00 [INFO] 
+[61/88] Scraping: UC Santa Cruz - ECE
+19:54:04 [INFO]   Found 1 faculty entries from UC Santa Cruz
+19:54:04 [INFO] Cache saved: 1829 professors
+19:54:04 [INFO] 
+[62/88] Scraping: Indiana University Bloomington - ISE
+19:54:07 [INFO]   Found 1 faculty entries from Indiana University Bloomington
+19:54:07 [INFO] Cache saved: 1829 professors
+19:54:07 [INFO] 
+[63/88] Scraping: Lehigh University - ECE
+19:54:07 [INFO]   Found 1 faculty entries from Lehigh University
+19:54:08 [INFO] Cache saved: 1829 professors
+19:54:08 [INFO] 
+[64/88] Scraping: West Virginia University - LCSEE
+19:54:09 [WARNING] Failed to fetch https://lcsee.statler.wvu.edu/faculty-staff/faculty: 404 Client Error: Not Found for url: https://lcsee.statler.wvu.edu/faculty-staff/faculty
+19:54:09 [INFO] Cache saved: 1829 professors
+19:54:09 [INFO] 
+[65/88] Scraping: Auburn University - ECE
+19:54:10 [WARNING] Failed to fetch https://www.eng.auburn.edu/ece/faculty-staff/index.html: 404 Client Error: Not Found for url: https://www.eng.auburn.edu/ece/faculty-staff/index.html
+19:54:10 [INFO] Cache saved: 1829 professors
+19:54:10 [INFO] 
+[66/88] Scraping: Clarkson University - ECE
+19:54:12 [INFO]   Found 27 faculty entries from Clarkson University
+19:54:12 [INFO] Cache saved: 1829 professors
+19:54:12 [INFO] 
+[67/88] Scraping: Swinburne University - Engineering
+19:54:13 [INFO]   Found 0 faculty entries from Swinburne University
+19:54:13 [INFO] Cache saved: 1829 professors
+19:54:13 [INFO] 
+[68/88] Scraping: Deakin University - Engineering
+19:54:15 [WARNING] Failed to fetch https://www.deakin.edu.au/school-of-engineering/our-research: 403 Client Error: Forbidden for url: https://www.deakin.edu.au/school-of-engineering/our-research
+19:54:15 [INFO] Cache saved: 1829 professors
+19:54:15 [INFO] 
+[69/88] Scraping: James Cook University - Engineering
+19:54:16 [WARNING] Failed to fetch https://www.jcu.edu.au/college-of-science-and-engineering/staff: 403 Client Error: Forbidden for url: https://www.jcu.edu.au/college-of-science-and-engineering/staff
+19:54:16 [INFO] Cache saved: 1829 professors
+19:54:16 [INFO] 
+[70/88] Scraping: University of Newcastle - Engineering
+19:54:18 [WARNING] Failed to fetch https://www.newcastle.edu.au/school/engineering: 403 Client Error: Forbidden for url: https://www.newcastle.edu.au/school/engineering
+19:54:18 [INFO] Cache saved: 1829 professors
+19:54:18 [INFO] 
+[71/88] Scraping: Macquarie University - Engineering
+19:54:20 [WARNING] Failed to fetch https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-engineering/our-people: 403 Client Error: Forbidden for url: https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-engineering/our-people
+19:54:20 [INFO] Cache saved: 1829 professors
+19:54:20 [INFO] 
+[72/88] Scraping: Flinders University - Engineering
+19:54:22 [WARNING] Failed to fetch https://www.flinders.edu.au/college-science-engineering/our-people: 404 Client Error: Not Found for url: https://www.flinders.edu.au/college-science-engineering/our-people
+19:54:22 [INFO] Cache saved: 1829 professors
+19:54:22 [INFO] 
+[73/88] Scraping: University of Tasmania - Engineering
+19:54:25 [WARNING] Failed to fetch https://www.utas.edu.au/science-engineering-technology/engineering/people: 403 Client Error: Forbidden for url: https://www.utas.edu.au/science-engineering-technology/engineering/people
+19:54:25 [INFO] Cache saved: 1829 professors
+19:54:25 [INFO] 
+[74/88] Scraping: La Trobe University - Engineering
+19:54:26 [INFO]   Found 1 faculty entries from La Trobe University
+19:54:26 [INFO] Cache saved: 1829 professors
+19:54:26 [INFO] 
+[75/88] Scraping: Western Sydney University - Engineering
+19:54:28 [WARNING] Failed to fetch https://www.westernsydney.edu.au/schools/scem/people/academic_staff: 404 Client Error: Not Found for url: https://www.westernsydney.edu.au/schools/scem/people/academic_staff
+19:54:28 [INFO] Cache saved: 1829 professors
+19:54:28 [INFO] 
+[76/88] Scraping: University of Canberra - SIT
+19:54:31 [WARNING] Failed to fetch https://www.canberra.edu.au/about-uc/faculties/scitech/staff: 404 Client Error: Not Found for url: https://www.canberra.edu.au/about-uc/faculties/scitech/staff
+19:54:31 [INFO] Cache saved: 1829 professors
+19:54:31 [INFO] 
+[77/88] Scraping: Murdoch University - Engineering
+19:54:33 [WARNING] Failed to fetch https://www.murdoch.edu.au/school-of-engineering-and-energy/staff: 404 Client Error: Not Found for url: https://www.murdoch.edu.au/school-of-engineering-and-energy/staff
+19:54:33 [INFO] Cache saved: 1829 professors
+19:54:33 [INFO] 
+[78/88] Scraping: University of South Australia - Engineering
+19:54:37 [INFO]   Found 1 faculty entries from University of South Australia
+19:54:37 [INFO] Cache saved: 1829 professors
+19:54:37 [INFO] 
+[79/88] Scraping: Queensland University of Technology - Engineering
+19:54:38 [WARNING] Failed to fetch https://www.qut.edu.au/about/our-people/academic-profiles: 403 Client Error: Forbidden for url: https://www.qut.edu.au/about/our-people/academic-profiles
+19:54:38 [INFO] Cache saved: 1829 professors
+19:54:38 [INFO] 
+[80/88] Scraping: University of Wollongong - EIS
+19:54:40 [WARNING] Failed to fetch https://www.uow.edu.au/engineering-information-sciences/about-us/our-people/: 404 Client Error: Not Found for url: https://www.uow.edu.au/engineering-information-sciences/about-us/our-people/
+19:54:40 [INFO] Cache saved: 1829 professors
+19:54:40 [INFO] 
+[81/88] Scraping: Charles Darwin University - Engineering
+19:54:43 [WARNING] Failed to fetch https://www.cdu.edu.au/science-technology/engineering/staff: 404 Client Error: Not Found for url: https://www.cdu.edu.au/science-technology/engineering/staff
+19:54:43 [INFO] Cache saved: 1829 professors
+19:54:43 [INFO] 
+[82/88] Scraping: Edith Cowan University - Engineering
+19:54:46 [WARNING] Failed to fetch https://www.ecu.edu.au/schools/engineering/staff: 403 Client Error: Forbidden for url: https://www.ecu.edu.au/schools/engineering/staff
+19:54:46 [INFO] Cache saved: 1829 professors
+19:54:46 [INFO] 
+[83/88] Scraping: Victoria University - Engineering
+19:54:49 [INFO]   Found 1 faculty entries from Victoria University
+19:54:49 [INFO] Cache saved: 1829 professors
+19:54:49 [INFO] 
+[84/88] Scraping: Charles Sturt University - Engineering
+19:54:50 [WARNING] Failed to fetch https://science-health.csu.edu.au/schools/engineering/staff: 404 Client Error: Not Found for url: https://science-health.csu.edu.au/schools/engineering/staff
+19:54:50 [INFO] Cache saved: 1829 professors
+19:54:50 [INFO] 
+[85/88] Scraping: Southern Cross University - Engineering
+19:54:52 [WARNING] Failed to fetch https://www.scu.edu.au/school-of-engineering-and-technology/our-people/: 404 Client Error: Not Found for url: https://www.scu.edu.au/school-of-engineering-and-technology/our-people/
+19:54:52 [INFO] Cache saved: 1829 professors
+19:54:52 [INFO] 
+[86/88] Scraping: Federation University - Engineering
+19:54:53 [WARNING] Failed to fetch https://federation.edu.au/faculties-and-schools/school-of-science-engineering-and-it/staff-profiles: 404 Client Error: Not Found for url: https://federation.edu.au/faculties-and-schools/school-of-science-engineering-and-it/staff-profiles
+19:54:53 [INFO] Cache saved: 1829 professors
+19:54:53 [INFO] 
+[87/88] Scraping: University of New England - Science/Tech
+19:54:56 [WARNING] Failed to fetch https://www.une.edu.au/about-une/faculty-of-science-agriculture-business-and-law/school-of-science-and-technology/staff: 403 Client Error: Forbidden for url: https://www.une.edu.au/about-une/faculty-of-science-agriculture-business-and-law/school-of-science-and-technology/staff
+19:54:56 [INFO] Cache saved: 1829 professors
+19:54:56 [INFO] 
+[88/88] Scraping: USC Australia - Science/Eng
+19:54:59 [WARNING] Failed to fetch https://www.usc.edu.au/about/structure/schools/school-of-science-technology-and-engineering/staff: 404 Client Error: Not Found for url: https://www.unisc.edu.au/about/structure/schools/school-of-science-technology-and-engineering/staff
+19:54:59 [INFO] Cache saved: 1829 professors
+19:54:59 [INFO] 
+PHASE 2: Enriching all professors from profile pages...
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:00 [WARNING] Connection pool is full, discarding connection: www.eecs.mit.edu. Connection pool size: 10
+19:55:03 [WARNING] Failed to fetch https://web.stanford.edu/~jduchi/: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+19:55:03 [WARNING] Failed to fetch http://web.stanford.edu/~boyd/: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+19:55:05 [WARNING] Connection pool is full, discarding connection: bme.duke.edu. Connection pool size: 10
+19:55:05 [WARNING] Connection pool is full, discarding connection: bme.duke.edu. Connection pool size: 10
+19:55:05 [WARNING] Connection pool is full, discarding connection: bme.duke.edu. Connection pool size: 10
+19:55:05 [WARNING] Connection pool is full, discarding connection: bme.duke.edu. Connection pool size: 10
+19:55:06 [WARNING] Connection pool is full, discarding connection: bme.duke.edu. Connection pool size: 10
+19:55:06 [WARNING] Connection pool is full, discarding connection: bme.duke.edu. Connection pool size: 10
+19:55:08 [WARNING] Failed to fetch https://engineering.purdue.edu/ECE/People/AdministrativeAreas: HTTPSConnectionPool(host='engineering.purdue.edu', port=443): Read timed out. (read timeout=5)
+19:55:13 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/sjinpark: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:13 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/zvpeng: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:13 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/rakheja: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:14 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/j-reid1: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:15 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/schuh4: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:15 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/shanbhag: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:15 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/yangshao: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:15 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/ilans: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:16 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/shultz88: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:16 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/acsinger: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:17 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/songp: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:18 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/rsrikant: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:18 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/stolyar: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:18 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/andrewrs: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:18 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/bsutton: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:18 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/swenson1: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:18 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/touri1: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:18 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:18 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/shenlong: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:19 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:19 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/rsree: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:19 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:19 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/jinjunx: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:19 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:19 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/nishil: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:19 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:19 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/torrella: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:19 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:19 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/yulinlw2: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:21 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:21 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/tyxu: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:21 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:21 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/xyz: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:21 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:21 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/huanz: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:21 [WARNING] Connection pool is full, discarding connection: ece.illinois.edu. Connection pool size: 10
+19:55:21 [WARNING] Failed to fetch https://ece.illinois.edu/about/directory/faculty/yzhaoui: HTTPSConnectionPool(host='ece.illinois.edu', port=443): Read timed out. (read timeout=5)
+19:55:24 [WARNING] Failed to fetch https://directory.engr.wisc.edu/ece/Faculty/Allie_Mark/: HTTPSConnectionPool(host='directory.engr.wisc.edu', port=443): Read timed out. (read timeout=5)
+19:55:24 [WARNING] Failed to fetch https://directory.engr.wisc.edu/ece/Faculty/Banerjee_Suman/: HTTPSConnectionPool(host='directory.engr.wisc.edu', port=443): Read timed out. (read timeout=5)
+19:55:24 [WARNING] Failed to fetch https://directory.engr.wisc.edu/ece/Faculty/Gupta_Mohit/: HTTPSConnectionPool(host='directory.engr.wisc.edu', port=443): Read timed out. (read timeout=5)
+19:55:25 [WARNING] Failed to fetch https://directory.engr.wisc.edu/ece/Faculty/Rodriguez_Jose/: HTTPSConnectionPool(host='directory.engr.wisc.edu', port=443): Read timed out. (read timeout=5)
+19:55:25 [WARNING] Failed to fetch https://directory.engr.wisc.edu/ece/Faculty/Sinclair_Matt/: HTTPSConnectionPool(host='directory.engr.wisc.edu', port=443): Read timed out. (read timeout=5)
+19:55:25 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:25 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:25 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:25 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:25 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:25 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:25 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: directory.engr.wisc.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: ece.vt.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: ece.vt.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: ece.vt.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: ece.vt.edu. Connection pool size: 10
+19:55:26 [WARNING] Connection pool is full, discarding connection: ece.vt.edu. Connection pool size: 10
+19:55:27 [WARNING] Connection pool is full, discarding connection: ece.vt.edu. Connection pool size: 10
+19:55:27 [WARNING] Connection pool is full, discarding connection: ece.vt.edu. Connection pool size: 10
+19:55:46 [WARNING] Failed to fetch https://ece.vt.edu/people/profile/martin.html: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+19:56:02 [WARNING] Failed to fetch https://eceweb.rice.edu/people/postdoctoral-staff: 406 Client Error: Not Acceptable for url: https://eceweb.rice.edu/people/postdoctoral-staff
+19:56:02 [WARNING] Failed to fetch https://www.bu.edu/hic/profile/eric-kolaczyk/: 404 Client Error: Not Found for url: https://www.bu.edu/hic/profile/eric-kolaczyk/
+19:56:13 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/alexander-n-cartwright/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:13 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/chen-chen/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:13 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/sonali-das/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:13 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/ronald-f-demara/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:13 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/aleksandar-dimitrovski/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:13 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/shady-elashhab/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/chinwendu-enyioha/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/yaser-p-fallah/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/paul-gazzillo/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/michael-georgiopoulos/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/xun-gong/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/charles-e-hughes/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/shahana-ibrahim/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/hadi-mardani-kamali/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/jaesung-lee/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/mingjie-lin/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:14 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/qifeng-li/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:15 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/w-linwood-jones/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:15 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/piotr-kulik/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:17 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/raj-mittra/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/sazadur-rahman/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/nazanin-rahnavard/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/mohsen-rakhshan/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/samuel-m-richie/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/saleem-sahawneh/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/marwan-simaan/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/wei-sun/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/parveen-wahid/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/azadeh-vosoughi/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:19 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/jun-wang/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/yue-wang/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/arthur-weeks/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/lei-wei/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/murat-yuksel/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/di-wu/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/fan-yao/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/xin-xin/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:20 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:20 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/jiann-s-yuan/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:21 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:21 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/enxia-zhang/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:22 [WARNING] Connection pool is full, discarding connection: www.ece.ucf.edu. Connection pool size: 10
+19:56:22 [WARNING] Failed to fetch https://www.ece.ucf.edu/person/hao-zheng/: HTTPSConnectionPool(host='www.ece.ucf.edu', port=443): Read timed out. (read timeout=5)
+19:56:40 [WARNING] Connection pool is full, discarding connection: eecs.uq.edu.au. Connection pool size: 10
+19:56:44 [WARNING] Failed to fetch https://ou.edu/cqrt/people/venkatesan: 404 Client Error: Not Found for url: https://ou.edu/cqrt/people/venkatesan
+19:56:44 [WARNING] Failed to fetch https://www.ou.edu/coe/sbme/people/dr_ding.html: 404 Client Error: Not Found for url: https://www.ou.edu/coe/sbme/people/dr_ding
+19:56:50 [WARNING] Failed to fetch https://csce.uark.edu/~dongjin/research/index.html: HTTPSConnectionPool(host='csce.uark.edu', port=443): Max retries exceeded with url: /~dongjin/research/index.html (Caused by ConnectTimeoutError(<HTTPSConnection(host='csce.uark.edu', port=443) at 0x27f1ce4e390>, 'Connection to csce.uark.edu timed out. (connect timeout=5)'))
+19:56:50 [WARNING] Failed to fetch https://csce.uark.edu/~qinghual/: HTTPSConnectionPool(host='csce.uark.edu', port=443): Max retries exceeded with url: /~qinghual/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='csce.uark.edu', port=443) at 0x27f1cc980b0>, 'Connection to csce.uark.edu timed out. (connect timeout=5)'))
+19:56:50 [WARNING] Connection pool is full, discarding connection: www.ece.msstate.edu. Connection pool size: 10
+19:56:54 [WARNING] Connection pool is full, discarding connection: www.ece.msstate.edu. Connection pool size: 10
+19:56:54 [WARNING] Connection pool is full, discarding connection: www.ece.msstate.edu. Connection pool size: 10
+19:56:55 [WARNING] Connection pool is full, discarding connection: www.ece.msstate.edu. Connection pool size: 10
+19:56:55 [WARNING] Connection pool is full, discarding connection: www.ece.msstate.edu. Connection pool size: 10
+19:56:57 [WARNING] Failed to fetch https://www.ece.udel.edu/people/faculty/elias/: 404 Client Error: Not Found for url: https://www.ece.udel.edu/people/faculty/elias/
+19:57:02 [WARNING] Failed to fetch https://www.udel.edu/academics/colleges/ceoe/departments/smsp/faculty/willett-kempton/: HTTPSConnectionPool(host='www.udel.edu', port=443): Read timed out. (read timeout=5)
+19:57:02 [INFO] Cache saved: 1829 professors
+19:57:02 [INFO] 
+PHASE 3: Scoring by research interest keywords...
+19:57:03 [INFO] Keyword filter: 1829 professors → 297 matched (min_score=1.0)
+19:57:03 [INFO] 
+PHASE 4: Generating reports...
+19:57:03 [INFO] HTML report generated: d:\Games\professor-finder\results\professors_report.html
+19:57:03 [INFO] CSV exported: d:\Games\professor-finder\results\professors_data.csv (297 professors)
+19:57:03 [INFO] 
+DONE!

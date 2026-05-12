@@ -252,8 +252,8 @@ body{{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);lin
   
   <div class="stats">
     <div class="stat wide"><div class="num" id="stat-total">{total}</div><div class="label">Total Professors</div></div>
-    <div class="stat"><div class="num">{unis}</div><div class="label">Universities</div></div>
-    <div class="stat"><div class="num">{with_email}</div><div class="label">With Email</div></div>
+    <div class="stat"><div class="num" id="stat-unis">{unis}</div><div class="label">Universities</div></div>
+    <div class="stat"><div class="num" id="stat-email">{with_email}</div><div class="label">With Email</div></div>
   </div>
 
   <div class="controls">
@@ -345,6 +345,15 @@ function applyFilters(){{
         const regionMatch = activeRegion === 'all' || g.dataset.country === activeRegion;
         g.classList.toggle('hidden', visible.length===0 || !regionMatch);
     }});
+    
+    // Update counters
+    const visibleCards = document.querySelectorAll('.card:not(.hidden)').length;
+    const visibleUnis = document.querySelectorAll('.uni-group:not(.hidden)').length;
+    const visibleEmails = document.querySelectorAll('.card:not(.hidden) .email-btn').length;
+    
+    document.getElementById('stat-total').innerText = visibleCards;
+    document.getElementById('stat-unis').innerText = visibleUnis;
+    document.getElementById('stat-email').innerText = visibleEmails;
 }}
 
 search.addEventListener('input', applyFilters);
