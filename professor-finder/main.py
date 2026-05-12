@@ -1,5 +1,5 @@
 """
-PhD Advisor Finder - Main Orchestrator (v2)
+AdvisorScout - Main Orchestrator (v2)
 
 Since Google Scholar blocks automated access, this version uses a two-step approach:
 1. Uses web search to find professors matching our keywords at target universities
@@ -447,7 +447,7 @@ FACULTY_URLS = [
 
 def main():
     logger.info("=" * 60)
-    logger.info("PhD Advisor Finder v2 - Starting")
+    logger.info("AdvisorScout v2 - Starting")
     logger.info("=" * 60)
     
     finder = ProfessorFinder()

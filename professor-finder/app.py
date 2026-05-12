@@ -1,5 +1,5 @@
 """
-Web UI Server for PhD Advisor Finder.
+Web UI Server for AdvisorScout.
 Provides a Start Scraping button and serves the dashboard.
 """
 

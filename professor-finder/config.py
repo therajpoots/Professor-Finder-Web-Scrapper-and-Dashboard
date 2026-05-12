@@ -1,5 +1,5 @@
 """
-Configuration for the Professor Finder tool.
+Configuration for AdvisorScout.
 Contains QS-ranked university lists, search keywords, and scraper settings.
 """
 
