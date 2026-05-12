@@ -16,6 +16,24 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
 .start-btn:active{transform:translateY(0)}
 .start-btn.running{background:var(--orange);box-shadow:0 8px 25px rgba(255,159,67,0.3);cursor:wait}
 
+/* Config Button */
+.config-box{margin-bottom:2rem}
+.config-btn{width:100%;padding:1rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:16px;color:var(--text);font-weight:600;font-size:0.9rem;cursor:pointer;transition:all .3s ease;display:flex;align-items:center;justify-content:center;gap:10px}
+.config-btn:hover{background:rgba(255,255,255,0.1);border-color:var(--accent)}
+
+/* Modal Styles */
+.modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:1000}
+.modal-content{background:var(--surface);border:1px solid var(--border);border-radius:24px;width:90%;max-width:800px;max-height:90vh;overflow-y:auto;padding:2.5rem;box-shadow:0 25px 50px rgba(0,0,0,0.5)}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}
+.modal-header h2{font-size:1.5rem;background:linear-gradient(135deg,var(--accent2),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.close-modal{background:none;border:none;color:var(--text2);font-size:1.5rem;cursor:pointer}
+.kw-group{margin-bottom:1.5rem;background:var(--glass);padding:1.5rem;border-radius:16px;border:1px solid var(--border)}
+.kw-label{display:block;font-size:0.8rem;color:var(--accent2);font-weight:700;margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:1px}
+.kw-input{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:12px;color:var(--text);padding:1rem;font-family:inherit;font-size:0.9rem;min-height:80px;resize:vertical}
+.modal-footer{display:flex;justify-content:flex-end;gap:1rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.btn-save{padding:0.8rem 2rem;background:var(--accent);color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer}
+.btn-cancel{padding:0.8rem 2rem;background:none;color:var(--text2);border:none;cursor:pointer}
+
 /* Progress Section */
 .live-status{background:rgba(125,95,255,0.05);border:1px solid rgba(125,95,255,0.2);border-radius:16px;padding:1.2rem;margin-bottom:2rem}
 .status-header{display:flex;justify-content:space-between;margin-bottom:0.5rem}
@@ -107,6 +125,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
     </button>
   </div>
 
+  <div class="config-box">
+    <button class="config-btn" id="config-btn">
+        ⚙️ Configure Keywords
+    </button>
+  </div>
+
   <!-- LIVE PROGRESS SECTION -->
   <div class="live-status" id="live-status">
     <div class="status-header">
@@ -151,7 +175,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
     </div>
   </div>
 
-  <div class="footer">Generated on<br>May 12, 2026 at 07:04 PM</div>
+  <div class="footer">Generated on<br>May 12, 2026 at 07:54 PM</div>
 </div>
 
 <div class="main-content">
@@ -215,7 +239,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:mimtiaz@clarkson.edu" class="btn email-btn">📧 mimtiaz@clarkson.edu</a> <a href="https://www.clarkson.edu/node/9900" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=gwJ4k48AAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">health monitoring</span><span class="tag matched">wearable sensor</span><span class="tag matched">wearable</span><span class="tag matched">sensor design</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">sensor design</span><span class="tag matched">machine learning</span><span class="tag matched">health monitoring</span><span class="tag matched">wearable sensor</span></div></div>
   <p class="bio">Dr. Masudul H Imtiaz obtained a Bachelor’s and a Master’s degree in Applied Physics, Electronics, and Communication Engineering from the University of Dhaka, Bangladesh. His MS thesis was on ‘Design and Software Implementation of a Real-Time Automated ECG Diagnosis System Using Multi-resolution Wavelet Transform.’ After completing his MS, Dr. Imtiaz served as an Electrical and Communication Engine</p>
   
 </div>
@@ -228,7 +252,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:akhondke@clarkson.edu" class="btn email-btn">📧 akhondke@clarkson.edu</a> <a href="https://www.clarkson.edu/node/9237" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">vlsi</span><span class="tag matched">integrated circuit</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">integrated circuit</span><span class="tag matched">vlsi</span></div></div>
   <p class="bio">Dr. Khondker's research interests are in the areas of digital design using FPGAs. Other research interest include solid state materials and device theory, very large scale integrated circuit (VLSI) design.</p>
   
 </div>
@@ -241,7 +265,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:mbanavar@clarkson.edu" class="btn email-btn">📧 mbanavar@clarkson.edu</a> <a href="https://www.clarkson.edu/node/9860" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">I am a professor in theDepartment of Electrical and Computer Engineeringand the Associate Director for Faculty Support with theInstitute for STEM EducationatClarkson University. I received the BE degree in Telecommunications Engineering fromVisvesvaraya Technological University, Karnataka, India, in 2005, the MS degree and the PhD degree, both in Electrical Engineering, fromArizona State Universit</p>
   
 </div>
@@ -292,7 +316,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://bme.duke.edu/people/sina-farsiu/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="http://scholar.google.com/citations?user=mzcr92sAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">medical image</span><span class="tag matched">artificial intelligence</span><span class="tag matched">image processing</span><span class="tag matched">deep learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">medical image</span><span class="tag matched">image processing</span><span class="tag matched">artificial intelligence</span><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">I am the director of the Vision and Image Processing (VIP) Laboratory. Along with my colleagues, we investigate how to improve early diagnostic methods and find new imaging biomarkers of ocular and neurological diseases in adults (e.g. age-related macular degeneration, diabetic retinopathy, Glaucoma, Alzheimer) and children (e.g. retinopathy or prematurity). We also develop automatic artificial in</p>
   
 </div>
@@ -305,7 +329,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:shruti.agashe@duke.edu" class="btn email-btn">📧 shruti.agashe@duke.edu</a> <a href="https://bme.duke.edu/people/shruti-agashe/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span><span class="tag matched">biomedical</span></div></div>
   <p class="bio">My patients have motivated me to be involved in clinical research. My interests spans areas such as identification of biomarkers in epilepsy, pre-surgical evaluation in epilepsy including stereoEEG and drugs/ device trials in epilepsy. Given my background in biomedical engineering, I have a special interest in Neuromodulation including deep brain stimulation, responsive neurostimulation, use of Ar</p>
   
 </div>
@@ -318,7 +342,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:matthew.l.becker@duke.edu" class="btn email-btn">📧 matthew.l.becker@duke.edu</a> <a href="https://bme.duke.edu/people/matthew-becker/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">flexible electronics</span><span class="tag matched">drug delivery</span><span class="tag matched">tissue engineering</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">drug delivery</span><span class="tag matched">tissue engineering</span><span class="tag matched">flexible electronics</span></div></div>
   <p class="bio">The Becker Laboratory for Functional Biomaterials is a multidisciplinary organic chemistry and biomaterials group working at the interface of chemistry, engineering and medicine.   My team is developing families of degradable polymers with highly tunable physical, structural and biological properties.  These materials are being applied to unmet needs in flexible electronics, soft tissue repair, ne</p>
   
 </div>
@@ -331,7 +355,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:evan.calabrese@duke.edu" class="btn email-btn">📧 evan.calabrese@duke.edu</a> <a href="https://bme.duke.edu/people/evan-calabrese/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">radiology</span><span class="tag matched">mri</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">radiology</span><span class="tag matched">mri</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">As a physician scientist focused on artificial intelligence (AI) applications for neurologic disease, my ongoing career goal is to combine clinical excellence in neuroradiology with cutting-edge AI research. My primary research interest lies in the use of innovative AI techniques to help extract clinically useful information from multimodal health data with a focus on neuro-oncology. Modern neuroi</p>
   
 </div>
@@ -357,7 +381,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:alexandra.badea@duke.edu" class="btn email-btn">📧 alexandra.badea@duke.edu</a> <a href="https://bme.duke.edu/people/alexandra-badea/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">radiology</span><span class="tag matched">mri</span><span class="tag matched">diffusion tensor</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">diffusion tensor</span><span class="tag matched">radiology</span><span class="tag matched">mri</span></div></div>
   <p class="bio">I have a joint appointment in Radiology and Neurology and my research focuses on neurological conditions like Alzheimer’s disease. I work on imaging and analysis to provide a comprehensive characterization of the brain. MRI is particularly suitable for brain imaging, and diffusion tensor imaging is an important tool for studying brain microstructure, and the connectivity amongst gray matter region</p>
   
 </div>
@@ -383,7 +407,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:david.carlson@duke.edu" class="btn email-btn">📧 david.carlson@duke.edu</a> <a href="https://bme.duke.edu/people/david-carlson/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">My general research focus is on developing novel machine learning and artificial intelligence techniques that can be used to accelerate scientific discovery.  I work extensively both on the fundamental theory and algorithms as well as translating them into scientific applications.  I have extensive partnerships deploying machine learning techniques in environmental health, mental health, and neuro</p>
   
 </div>
@@ -396,7 +420,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://bme.duke.edu/people/ashutosh-chilkoti/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="http://scholar.google.com/citations?user=h9Tji70AAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biosensor</span><span class="tag matched">drug delivery</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">drug delivery</span><span class="tag matched">biosensor</span></div></div>
   <p class="bio">My research in biomolecular engineering and biointerface science focuses on the development of new molecular tools and technologies that borrow from molecular biology, protein engineering, polymer chemistry and surface science that we then exploit for the development of applications that span the range from bioseparations, plasmonic biosensors, low-cost clinical diagnostics, and drug delivery.</p>
   
 </div>
@@ -486,7 +510,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Research InterestsEmbedded systemsWearable devices</span><span class="tag">Body-worn sensorsWireless sensors and measurement</span><span class="tag">Printed Spiral Coils (PSCs)Bioinstrumentation</span></div>
   <div class="actions"><a href="mailto:bnoroozi@eng.famu.fsu.edu" class="btn email-btn">📧 bnoroozi@eng.famu.fsu.edu</a> <a href="https://www.eng.famu.fsu.edu/ece/people/noroozi" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">bioinstrumentation</span><span class="tag matched">wearable</span><span class="tag matched">wearable device</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">wearable device</span><span class="tag matched">bioinstrumentation</span></div></div>
   
   
 </div>
@@ -499,7 +523,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Research InterestsExplainable Machine Learning and Artificial Intelligence (AI)Cybersecurity and Machine Learning PrivacyQuantum Computation and Information SecurityComputer Vision and Natural Language ProcessingSystem-on-Chip (SoC) design for trustworthy</span></div>
   <div class="actions"><a href="mailto:zpan@eng.famu.fsu.edu" class="btn email-btn">📧 zpan@eng.famu.fsu.edu</a> <a href="https://www.eng.famu.fsu.edu/ece/people/pan" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">natural language processing</span><span class="tag matched">computer vision</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span><span class="tag matched">artificial intelligence</span><span class="tag matched">natural language processing</span></div></div>
   
   
 </div>
@@ -512,7 +536,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Research InterestsPhotovoltaicsMulti-junction III-V compound Solar CellsOrganic/Polymer Solar CellsQuantum Dot Solar CellsPerovskite Solar CellsMachine Learning/Deep Learning/Artificial Intelligence</span></div>
   <div class="actions"><a href="mailto:foo@eng.famu.fsu.edu" class="btn email-btn">📧 foo@eng.famu.fsu.edu</a> <a href="https://www.eng.famu.fsu.edu/ece/people/foo" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">deep learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Dr. Foo is a tenured professor at the Department of Electrical and Computer Engineering at Florida A&amp;M University and Florida State University and the FAMU-FSU College of Engineering. His main research contributions have been in the areas of photovoltaics and machine learning/artificial intelligence. Dr. Foo has authored or co-authored over 150 refereed technical papers and contributed to two book</p>
   
 </div>
@@ -525,7 +549,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Research InterestsPost-Quantum CryptographyHomomorphic EncryptionError Correction CodesMachine LearningApplied Artificial Intelligence and CybersecurityDigital System-on-Chip Design</span></div>
   <div class="actions"><a href="mailto:tuy.nguyen@eng.famu.fsu.edu" class="btn email-btn">📧 tuy.nguyen@eng.famu.fsu.edu</a> <a href="https://www.eng.famu.fsu.edu/ece/people/nguyen" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   
   
 </div>
@@ -538,7 +562,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Research InterestsArtificial IntelligenceMachine LearningCyber-Physical SystemsCybersecuritySmart GridBioinformatics</span></div>
   <div class="actions"><a href="mailto:a.takiddin@eng.famu.fsu.edu" class="btn email-btn">📧 a.takiddin@eng.famu.fsu.edu</a> <a href="https://www.eng.famu.fsu.edu/ece/people/takiddin" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=4zR2Up4AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   
   
 </div>
@@ -699,7 +723,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:hal@mit.edu" class="btn email-btn">📧 hal@mit.edu</a> <a href="https://www.eecs.mit.edu/people/?fwp_research=artificial-intelligence-machine-learning" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   
   
 </div>
@@ -737,7 +761,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:igor.efimov@northwestern.edu" class="btn email-btn">📧 igor.efimov@northwestern.edu</a> <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/efimov-igor.html" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">implantable</span><span class="tag matched">wearable</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">machine learning</span><span class="tag matched">implantable</span></div></div>
   <p class="bio">Igor Efimovâs Research Interests:Â My Cardiovascular Engineering and Technology laboratory focuses on the physiological mechanisms of cardiovascular disease and on developing novel therapies for heart diseases with an emphasis on heart rhythm disorders and heart failure. Two bioengineering strategies are pursued: (1) development of novel implantable, interventional, and wearable bioelectronic de</p>
   
 </div>
@@ -750,7 +774,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:m-glucksberg@northwestern.edu" class="btn email-btn">📧 m-glucksberg@northwestern.edu</a> <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/glucksberg-matthew.html" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biosensor</span><span class="tag matched">photonics</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">biosensor</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">Matt Glucksberg is a Professor of Biomedical Engineering at Northwestern University, and the Director of the Center for Innovation in Global Health Technologies. His technical expertise is in tissue mechanics, microcirculation, and optical instrumentation. His laboratory has developed photonics-based instrumentation to measure pressure and flow in the circulation of the eye, instruments to measure</p>
   
 </div>
@@ -776,7 +800,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:jrivnay@northwestern.edu" class="btn email-btn">📧 jrivnay@northwestern.edu</a> <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/rivnay-jonathan.html" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">bioelectronics</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">bioelectronics</span><span class="tag matched">biomedical</span></div></div>
   <p class="bio">The Rivnay group engineers organic and biohybrid bioelectronic materials, devices and systems for interfacing between the complex world of biology and traditional optoelectronics. Our interests involve understanding the unique active properties of organic (small molecule and polymeric) materials, including mixed ionic-electronic conduction and actuation and utilizing their strengths for sensing/st</p>
   
 </div>
@@ -1060,7 +1084,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:mskecr@rit.edu" class="btn email-btn">📧 mskecr@rit.edu</a> <a href="https://www.rit.edu/engineering/study/electrical-and-computer-engineering-phd" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">The 21st century has witnessed such advances as the Smart Grid, ubiquitous fast internet access through wireless networks, artificial intelligence and machine learning technologies that rival humans in performance, the Internet-of-Things, cloud computing, fiber-optic networks capable of transmitting trillions of bits per second, new computing paradigms such as quantum or neuromorphic computing, an</p>
   
 </div>
@@ -1123,7 +1147,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:mml005@uab.edu" class="btn email-btn">📧 mml005@uab.edu</a> <a href="https://www.uab.edu/engineering/ece/people/faculty/s-abdollah-mirbozorgi" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=QeUuF3AAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">implantable</span><span class="tag matched">wearable</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">implantable</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">Research and Teaching Interests:The intersection between the life sciences and circuits and systems engineering disciplines, including wearable/implantable microelectronic devices and medical imaging devices</p>
   
 </div>
@@ -1174,7 +1198,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Digital signal processing</span><span class="tag">image processing</span><span class="tag">biomedical instrumentation</span><span class="tag">linear algebra and probability theory</span><span class="tag">machine learning in image and video processing</span></div>
   <div class="actions"><a href="mailto:bilgin@arizona.edu" class="btn email-btn">📧 bilgin@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/ali-bilgin" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=I25Yns8AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">image processing</span><span class="tag matched">biomedical</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">machine learning</span><span class="tag matched">image processing</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">In 2002, Bilgin completed his PhD in electrical engineering at the University in Arizona, where he currently serves as an associate professor in biomedical, electrical and computer engineering and medical imaging. Since 2012, he has been awarded multiple times by the UA College of Engineering for his teaching, including being named Most Supportive Senior Faculty.</p>
   
 </div>
@@ -1187,7 +1211,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Signal and image/video processing</span><span class="tag">medical imaging</span><span class="tag">machine learning</span></div>
   <div class="actions"><a href="mailto:eungjoolee@arizona.edu" class="btn email-btn">📧 eungjoolee@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/eung-joo-lee" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=cyxDfeIAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">deep learning</span><span class="tag matched">computer vision</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">Eungjoo Lee is an assistant professor in the Department of Electrical and Computer Engineering. His primary research focuses on developing deep learning algorithms that utilize computationally efficient models designed specifically for embedded computer vision systems and medical imaging applications.Prior to joining the University of Arizona, he was a postdoctoral research fellow at MGH/Harvard M</p>
   
 </div>
@@ -1213,7 +1237,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Logic design</span><span class="tag">embedded microcontroller</span><span class="tag">programming languages</span><span class="tag">wireless communication</span></div>
   <div class="actions"><a href="mailto:mmalek@arizona.edu" class="btn email-btn">📧 mmalek@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/mai-abdel-malek" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=W_AqZkAAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">internet of things</span><span class="tag matched">ic design</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">ic design</span><span class="tag matched">internet of things</span></div></div>
   <p class="bio">Mai Abdel-Malek is an assistant professor of practice in electrical and computer engineering. Her research interests include next-generation cellular technologies, 5G network security, electric vehicles, UAVs/drone communication, secure Internet of Things networks and device-to-device communications.</p>
   
 </div>
@@ -1226,7 +1250,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:huanruiyang@arizona.edu" class="btn email-btn">📧 huanruiyang@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/huanrui-yang" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">neural network</span><span class="tag matched">natural language processing</span><span class="tag matched">computer vision</span><span class="tag matched">federated learning</span><span class="tag matched">deep learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">computer vision</span><span class="tag matched">natural language processing</span><span class="tag matched">federated learning</span><span class="tag matched">neural network</span><span class="tag matched">deep learning</span></div></div>
   <p class="bio">Huanrui Yang is an assistant professor in the Department of Electrical and Computer Engineering at the University of Arizona. His primary research aims to develop mathematical understandings of the efficiency and robustness of deep neural network models to make deep learning usable in real world tasks, with applications spanning from computer vision, generative model and natural language processin</p>
   
 </div>
@@ -1239,7 +1263,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">TeachingCloud computing</span><span class="tag">software engineering</span><span class="tag">software testing operating systemResearchCloud computing</span><span class="tag">edge software engineering</span><span class="tag">performance engineering</span><span class="tag">artificial intelligence/machine learning</span><span class="tag">computer vision</span></div>
   <div class="actions"><a href="mailto:senhe@arizona.edu" class="btn email-btn">📧 senhe@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/sen-he" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Sen He is a tenure-track assistant professor in the Department of Electrical and Computer Engineering (Software Engineering Program) at the University of Arizona. He received his PhD from The University of Texas at San Antonio in July 2022. He's research interests include the areas of cloud computing, edge, software engineering (formal methods), performance engineering (statistic/AI integrated sof</p>
   
 </div>
@@ -1252,7 +1276,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Optical engineering</span><span class="tag">integrated photonics</span><span class="tag">practical quantum networks</span><span class="tag">electromagnetism</span></div>
   <div class="actions"><a href="mailto:shelbijenkins@arizona.edu" class="btn email-btn">📧 shelbijenkins@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/shelbi-jenkins" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">photonics</span><span class="tag matched">integrated circuit</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">integrated circuit</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">Shelbi Jenkins earned her PhD in 2021 from the Wyant College of Optical Sciences at the University of Arizona, where she conducted research in Robert Norwood's Photonic Devices and Materials Laboratory. Her work focused on free-space and fiber-optic systems, photonic integrated circuits, magneto-optic polymer material characterization, telecommunication devices and cryogenic focal plane array syst</p>
   
 </div>
@@ -1265,7 +1289,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:boliu@arizona.edu" class="btn email-btn">📧 boliu@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/bo-liu" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Bo Liu is an associate professor in the ECE department. He holds a PhD from the University of Massachusetts Amherst. He previously worked at Amazon Research, Auburn University and Philips Research. Liu researches decision-making and neural-symbolic artificial intelligence. He is a senior member of  the Institute of Electrical and Electronics Engineers (IEEE) and the Association for the Advancement</p>
   
 </div>
@@ -1278,7 +1302,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Machine learning</span><span class="tag">artificial intelligence</span><span class="tag">computer architecture</span></div>
   <div class="actions"><a href="mailto:xiaolongma@arizona.edu" class="btn email-btn">📧 xiaolongma@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/xiaolong-ma" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Xiaolong Ma is an assistant professor in the Department of Electrical and Computer Engineering at the University of Arizona. He received his PhD in computer engineering at Northeastern University in 2022. Prior to joining the U of A faculty, he was an assistant professor in the Department of Electrical and Computer Engineering at Clemson University.</p>
   
 </div>
@@ -1291,7 +1315,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   <div class="tags"><span class="tag">Artificial Intelligence (AI)</span><span class="tag">knowledge systems</span><span class="tag">and computer vision and robotics</span></div>
   <div class="actions"><a href="mailto:marefat@arizona.edu" class="btn email-btn">📧 marefat@arizona.edu</a> <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/michael-m-marefat" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">computer vision</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">computer vision</span><span class="tag matched">artificial intelligence</span></div></div>
   
   
 </div>
@@ -1511,7 +1535,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:masoumeh.kalantari-khandani@ucf.edu" class="btn email-btn">📧 masoumeh.kalantari-khandani@ucf.edu</a> <a href="https://www.ece.ucf.edu/person/masoumeh-kalantari-khandani/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">She has been a lecturer at UCF since 2024. Her teaching interests include signal processing and analysis, machine learning and digital systems. Her research interests include the application of artificial intelligence, machine learning and signal processing in medical imaging, in particular for magnetic particle imaging.</p>
   
 </div>
@@ -1524,7 +1548,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:Yehuda.Braiman@ucf.edu" class="btn email-btn">📧 Yehuda.Braiman@ucf.edu</a> <a href="https://www.ece.ucf.edu/person/yehuda-braiman/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">photonics</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">Dr. Yehuda Braiman is Research Professor at The College of Photonics and Optics and Department of Electrical and Computer Engineering at the University of Central Florida started January 2020. He is also an Adjunct Professor at the Department of Mechanical, Aerospace, and Biomedical Engineering at the University of Tennessee. Prior to his appointment at UCF, Dr. Braiman held an appointment of a Di</p>
   
 </div>
@@ -1537,7 +1561,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:saikat.dey@ucf.edu" class="btn email-btn">📧 saikat.dey@ucf.edu</a> <a href="https://www.ece.ucf.edu/person/saikat-dey/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">semiconductor</span><span class="tag matched">health monitoring</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">health monitoring</span><span class="tag matched">semiconductor</span></div></div>
   <p class="bio">Dey’s research interests include design, modeling, optimization and control of multi-order power electronic converters, high frequency high-density and highly efficient power conversion solutions using wide-bandgap semiconductors with applications in clean energy systems, transportation electrification, extreme temperature/space electronics, AI-assisted parameter estimation, health monitoring, rel</p>
   
 </div>
@@ -1653,7 +1677,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://homepages.uc.edu/~kim4yg/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable sensor</span><span class="tag matched">wearable</span><span class="tag matched">bioelectronics</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">bioelectronics</span><span class="tag matched">wearable sensor</span></div></div>
   <p class="bio">News4/21/2026 Yeongin Kim was awarded William H. Middendorf Research Excellence Award.3/19/2026 Our research group received $85,000 from Air Force Research Laboratory (AFRL).11/28/2025 Yeongin Kim is organizing2026 MRS Fall Symposium SB03: Artificial Nerves for Neuromorphic Robotics and Bioelectronics8/2/2024 Yeongin Kim was invited to NNCI Nano + Additive Manufacturing Summit 2024 and highlighted</p>
   
 </div></div>
@@ -1678,7 +1702,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:barner@udel.edu" class="btn email-btn">📧 barner@udel.edu</a> <a href="https://www.ece.udel.edu/people/faculty/barner/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=-CPsGakAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">ai-driven</span><span class="tag matched">medical imaging</span><span class="tag matched">medical image</span><span class="tag matched">biomedical</span><span class="tag matched">artificial intelligence</span><span class="tag matched">deep learning</span><span class="tag matched">image segmentation</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">medical image</span><span class="tag matched">ai-driven</span><span class="tag matched">image segmentation</span><span class="tag matched">biomedical</span><span class="tag matched">medical imaging</span><span class="tag matched">artificial intelligence</span><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">Prof. Kenneth E. Barner’s research centers on machine learning, artificial intelligence, and statistical signal processing, with applications spanning biomedical imaging, human–computer interaction, cybersecurity, and autonomous sensing systems. His work integrates deep learning, nonlinear and sparse signal processing, and graph signal processing to develop robust, data-efficient algorithms for ch</p>
   
 </div>
@@ -1691,7 +1715,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:arce@udel.edu" class="btn email-btn">📧 arce@udel.edu</a> <a href="https://www.ece.udel.edu/people/faculty/arce/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=1JyQMewAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">x-ray</span><span class="tag matched">neural network</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">neural network</span><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span><span class="tag matched">x-ray</span></div></div>
   <p class="bio">Dr. Gonzalo Arce’s expertise lies in the fields of computational imaging, signal processing on graphs, and machine learning. His research is highly interdisciplinary, drawing from the theories of mathematics, optics, statistics, and artificial intelligence. Dr. Arce’s primary research areas encompass computational compressive lidar, compressive sensing for spectral imaging, spectral X-Ray tomograp</p>
   
 </div>
@@ -1704,7 +1728,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:ajbrock@udel.edu" class="btn email-btn">📧 ajbrock@udel.edu</a> <a href="https://www.ece.udel.edu/people/faculty/ajbrock/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=g_QoCQQAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">natural language processing</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">biomedical</span><span class="tag matched">natural language processing</span></div></div>
   <p class="bio">His research interests include data science, machine learning, signal processing, and the underlying mathematics and design of statistical models, optimizations, and algorithms. He has experience with complex data from the domains of biomedical engineering, neuroscience, and natural language processing.</p>
   
 </div>
@@ -1769,7 +1793,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:mirotzni@udel.edu" class="btn email-btn">📧 mirotzni@udel.edu</a> <a href="https://www.ece.udel.edu/people/faculty/mirotzni/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=mDpm4w8AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biosensor</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">biosensor</span></div></div>
   <p class="bio">Prof. Mark Mirotznik’s research is focused on the development of new theoretical, computational and experimental techniques applied to a diverse array of applications in electromagnetics and optics. His current research focuses in three application areas; (1) biomedical instrumentation, (2) engineered electromagnetic materials and (3) computational imaging. In the biomedical field Prof. Mirotznik </p>
   
 </div>
@@ -1795,7 +1819,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:yzeng@udel.edu" class="btn email-btn">📧 yzeng@udel.edu</a> <a href="https://www.ece.udel.edu/people/faculty/yzeng/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?hl=en&amp;user=fgMu-3kAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">semiconductor</span><span class="tag matched">device design</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">device design</span><span class="tag matched">semiconductor</span></div></div>
   <p class="bio">Prof. Zeng’s research focuses on creating high-speed devices for high performance applications and novel electron devices for low power applications by using new materials, novel device design and innovative fabrication techniques. Her research interests include (1) high speed transistors (heterojunction bipolar transistors and high electron mobility transistors); (2) novel transistors (tunneling </p>
   
 </div>
@@ -1808,7 +1832,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);line
   
   
   <div class="actions"><a href="mailto:ghuang@udel.edu" class="btn email-btn">📧 ghuang@udel.edu</a> <a href="https://me.udel.edu/faculty/guoquan-huang/" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="http://scholar.google.com/citations?user=trMUyZIAAAAJ" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">computer vision</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">computer vision</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Dr. Huang is an Assistant Professor in Mechanical Engineering at the University of Delaware. Prior to UD, he was a Postdoctoral Associate with the Marine Robotics Group in the Computer Science and Artificial Intelligence Laboratory (CSAIL), Massachusetts Institute of Technology (MIT). He received the B.Eng. degree in automation (electrical engineering) from the University of Science and Technology</p>
   
 </div>
@@ -1964,7 +1988,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">ChandramanPatilResearch Assistant Professorc.patil@ufl.eduINTERNETPrimary Research AreaElectronicsResearch InterestsPhotonic Devices and Photonic Integrated Circuits (PICs)</span><span class="tag">Material Metrology</span><span class="tag">Heterogeneous Integrated System</span><span class="tag">Photonic InterconnectsHonors and AwardsThe MOC Student Award</span><span class="tag">26th Micro Optics Conference</span><span class="tag">Japan</span><span class="tag">2021National Center for Supercomputing Applications (NCSA) nanoMFG Fellowship</span><span class="tag">University of Illinois Urbana-Champaign</span><span class="tag">2021Sprawcew Scholarship</span><span class="tag">George Washington University 2021–22View Profile</span></div>
   <div class="actions"><a href="mailto:darnold@ufl.edu" class="btn email-btn">📧 darnold@ufl.edu</a> <a href="https://ece.ufl.edu/people/faculty/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">implantable</span><span class="tag matched">semiconductor</span><span class="tag matched">wearable</span><span class="tag matched">integrated circuit</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">semiconductor</span><span class="tag matched">integrated circuit</span><span class="tag matched">implantable</span></div></div>
   <p class="bio">Primary Research AreaComputer EngineeringResearch InterestsHardware and systems security, food and medicine safety, adaptive and energy-efficient computing, wearable and implantable systemsHonors and AwardsUFRF Professorship, 2024IEEE Fellow, 2024Excellence in Research Award, EECS, Case Western Reserve University, 2013IBM Faculty Award, 2013T. and A. Schroeder Chair Professorship, Computer Science</p>
   
 </div>
@@ -1978,7 +2002,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">ChandramanPatilResearch Assistant Professorc.patil@ufl.eduINTERNETPrimary Research AreaElectronicsResearch InterestsPhotonic Devices and Photonic Integrated Circuits (PICs)</span><span class="tag">Material Metrology</span><span class="tag">Heterogeneous Integrated System</span><span class="tag">Photonic InterconnectsHonors and AwardsThe MOC Student Award</span><span class="tag">26th Micro Optics Conference</span><span class="tag">Japan</span><span class="tag">2021National Center for Supercomputing Applications (NCSA) nanoMFG Fellowship</span><span class="tag">University of Illinois Urbana-Champaign</span><span class="tag">2021Sprawcew Scholarship</span><span class="tag">George Washington University 2021–22View Profile</span></div>
   <div class="actions"><a href="mailto:darnold@ufl.edu" class="btn email-btn">📧 darnold@ufl.edu</a> <a href="https://ece.ufl.edu/people/faculty/#affiliate" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">implantable</span><span class="tag matched">semiconductor</span><span class="tag matched">wearable</span><span class="tag matched">integrated circuit</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">semiconductor</span><span class="tag matched">integrated circuit</span><span class="tag matched">implantable</span></div></div>
   <p class="bio">Primary Research AreaComputer EngineeringResearch InterestsHardware and systems security, food and medicine safety, adaptive and energy-efficient computing, wearable and implantable systemsHonors and AwardsUFRF Professorship, 2024IEEE Fellow, 2024Excellence in Research Award, EECS, Case Western Reserve University, 2013IBM Faculty Award, 2013T. and A. Schroeder Chair Professorship, Computer Science</p>
   
 </div>
@@ -1992,7 +2016,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">ChandramanPatilResearch Assistant Professorc.patil@ufl.eduINTERNETPrimary Research AreaElectronicsResearch InterestsPhotonic Devices and Photonic Integrated Circuits (PICs)</span><span class="tag">Material Metrology</span><span class="tag">Heterogeneous Integrated System</span><span class="tag">Photonic InterconnectsHonors and AwardsThe MOC Student Award</span><span class="tag">26th Micro Optics Conference</span><span class="tag">Japan</span><span class="tag">2021National Center for Supercomputing Applications (NCSA) nanoMFG Fellowship</span><span class="tag">University of Illinois Urbana-Champaign</span><span class="tag">2021Sprawcew Scholarship</span><span class="tag">George Washington University 2021–22View Profile</span></div>
   <div class="actions"><a href="mailto:darnold@ufl.edu" class="btn email-btn">📧 darnold@ufl.edu</a> <a href="https://ece.ufl.edu/people/faculty//#emeritus" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">implantable</span><span class="tag matched">semiconductor</span><span class="tag matched">wearable</span><span class="tag matched">integrated circuit</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">semiconductor</span><span class="tag matched">integrated circuit</span><span class="tag matched">implantable</span></div></div>
   <p class="bio">Primary Research AreaComputer EngineeringResearch InterestsHardware and systems security, food and medicine safety, adaptive and energy-efficient computing, wearable and implantable systemsHonors and AwardsUFRF Professorship, 2024IEEE Fellow, 2024Excellence in Research Award, EECS, Case Western Reserve University, 2013IBM Faculty Award, 2013T. and A. Schroeder Chair Professorship, Computer Science</p>
   
 </div>
@@ -2005,7 +2029,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">No Photo AvailableEricaAlvarezAdministrative Assistant II (FSI)352-846-4988homeericaaalvarez@ufl.eduINTERNETView Profile</span></div>
   <div class="actions"><a href="mailto:caber@ufl.edu" class="btn email-btn">📧 caber@ufl.edu</a> <a href="https://ece.ufl.edu/people/directory/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">implantable</span><span class="tag matched">semiconductor</span><span class="tag matched">wearable</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">semiconductor</span><span class="tag matched">implantable</span></div></div>
   <p class="bio">Primary Research AreaComputer EngineeringResearch InterestsHardware and systems security, food and medicine safety, adaptive and energy-efficient computing, wearable and implantable systemsHonors and AwardsUFRF Professorship, 2024IEEE Fellow, 2024Excellence in Research Award, EECS, Case Western Reserve University, 2013IBM Faculty Award, 2013T. and A. Schroeder Chair Professorship, Computer Science</p>
   
 </div>
@@ -2018,7 +2042,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">No Photo AvailableEricaAlvarezAdministrative Assistant II (FSI)352-846-4988homeericaaalvarez@ufl.eduINTERNETView Profile</span></div>
   <div class="actions"><a href="mailto:caber@ufl.edu" class="btn email-btn">📧 caber@ufl.edu</a> <a href="https://ece.ufl.edu/people/directory/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">implantable</span><span class="tag matched">semiconductor</span><span class="tag matched">wearable</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">semiconductor</span><span class="tag matched">implantable</span></div></div>
   <p class="bio">Primary Research AreaComputer EngineeringResearch InterestsHardware and systems security, food and medicine safety, adaptive and energy-efficient computing, wearable and implantable systemsHonors and AwardsUFRF Professorship, 2024IEEE Fellow, 2024Excellence in Research Award, EECS, Case Western Reserve University, 2013IBM Faculty Award, 2013T. and A. Schroeder Chair Professorship, Computer Science</p>
   
 </div>
@@ -2057,7 +2081,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsBiomedical Imaging</span><span class="tag">Medical Devices</span><span class="tag">Photonics</span><span class="tag">Image Processing</span><span class="tag">Biomedical Instrumentation</span><span class="tag">Spectroscopic Imaging</span><span class="tag">Mid-Infrared and Vibrational Spectroscopy</span><span class="tag">Optical Coherence Tomography</span><span class="tag">Optical Imaging</span><span class="tag">Tomography</span><span class="tag">Inverse Problems.</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/reddy" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=V3dT288AAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">optical coherence tomography</span><span class="tag matched">medical imaging</span><span class="tag matched">biomedical</span><span class="tag matched">image processing</span><span class="tag matched">photonics</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">optical coherence tomography</span><span class="tag matched">biomedical</span><span class="tag matched">image processing</span><span class="tag matched">medical imaging</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">M.J. Walsh, R.K. Reddy, R. Bhargava, “Label-free Biomedical Imaging with Mid- Infrared Spectroscopy”, IEEE Journal of Selected Topics in Quantum Electronics focusing on Biophotonics 2, 18(4), 1502-1513, 2012.</p>
   
 </div>
@@ -2070,7 +2094,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsSoft and Stretchable Bioelectronics</span><span class="tag">Bioelectronics-Tissue Integration</span><span class="tag">3D Biofabrication for Tissue Engineering</span><span class="tag">Ambulatory Biosensors</span><span class="tag">Electrophysiology</span><span class="tag">Neuromodulation</span><span class="tag">Machine Learning for Bioelectronics</span><span class="tag">Optoelectronic Modulation</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/ershad-faheem" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=1469qAwAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">electrophysiology</span><span class="tag matched">bioelectronics</span><span class="tag matched">tissue engineering</span><span class="tag matched">biosensor</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">tissue engineering</span><span class="tag matched">biosensor</span><span class="tag matched">bioelectronics</span><span class="tag matched">electrophysiology</span><span class="tag matched">machine learning</span></div></div>
   
   
 </div>
@@ -2083,7 +2107,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsPrivacy Preserving Deep Learning</span><span class="tag">Big Data Privacy</span><span class="tag">Wireless Security and Privacy</span><span class="tag">Wireless Networking</span><span class="tag">Machine Learning for Wireless Networking</span><span class="tag">Data Driven Optimization</span><span class="tag">Deep Reinforcement Learning Inspired Applications</span><span class="tag">Internet of Things (IoT)</span><span class="tag">Underwater Wireless Communications and Networks</span><span class="tag">Stress Wave Communications</span><span class="tag">Magnetic Induction Inspired Underwater/Underground Wireless Applications</span><span class="tag">Cognitive Radio Networks</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/pan" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=zwh0osAAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">internet of things</span><span class="tag matched">deep learning</span><span class="tag matched">reinforcement learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span><span class="tag matched">reinforcement learning</span><span class="tag matched">internet of things</span></div></div>
   
   
 </div>
@@ -2096,7 +2120,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsPhotoacoustic laser streaming</span><span class="tag">Graphene</span><span class="tag">2D materials</span><span class="tag">Solar water-splitting</span><span class="tag">CO2 reduction</span><span class="tag">Solar ammonia generation</span><span class="tag">Organic-inorganic perovskites</span><span class="tag">Opto-fluidics</span><span class="tag">Semiconductor nanowire optoelectronics</span><span class="tag">Silicon photonics and metallic nanostructures for plasmonics</span><span class="tag">Fiber optic sensors</span><span class="tag">Plasmonic biosensors.</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/bao-jiming" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=9IGuk9sAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">semiconductor</span><span class="tag matched">photonics</span><span class="tag matched">biosensor</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">semiconductor</span><span class="tag matched">biosensor</span><span class="tag matched">photonics</span></div></div>
   
   
 </div>
@@ -2109,7 +2133,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsNew technology development for biomedicine and portable chem/biosensing based on core research expertise in nanobiophotonics</span><span class="tag">plasmonics</span><span class="tag">surface-enhanced Raman spectroscopy (SERS)</span><span class="tag">nanofabrication</span><span class="tag">optical imaging</span><span class="tag">microscopy &amp; spectroscopy</span><span class="tag">single nanoparticle (exosome</span><span class="tag">virus) analysis</span><span class="tag">disease diagnosis by virtual biopsy</span><span class="tag">N/MEMS/microfluidics</span><span class="tag">lab-on-a-chip</span><span class="tag">smartphone microscopy and portable chemical/biological sensor.</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/shih-wei-chuan" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=LEbRDZMAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">photonics</span><span class="tag matched">mems</span><span class="tag matched">microfluidic</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">mems</span><span class="tag matched">microfluidic</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">New technology development for biomedicine and portable chem/biosensing based on core research expertise in nanobiophotonics, plasmonics, surface-enhanced Raman spectroscopy (SERS), nanofabrication, optical imaging, microscopy &amp; spectroscopy, single nanoparticle (exosome, virus) analysis, disease diagnosis by virtual biopsy, N/MEMS/microfluidics, lab-on-a-chip, smartphone microscopy and portable c</p>
   
 </div>
@@ -2122,7 +2146,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsSingle-molecule sensors</span><span class="tag">Optofluidics devices and systems</span><span class="tag">Biosensors</span><span class="tag">Nanophotonics for biomedical applications.</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/kotnala-abhay" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=9ZsBWr0AAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biosensor</span><span class="tag matched">photonics</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">biosensor</span><span class="tag matched">photonics</span></div></div>
   
   
 </div>
@@ -2148,7 +2172,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsNanofabrication</span><span class="tag">Microscopic Devices</span><span class="tag">Biosensors</span><span class="tag">Sustainable Management</span><span class="tag">Holistic Design</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/chang" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=cftSEqQAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biosensor</span><span class="tag matched">ic design</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">ic design</span><span class="tag matched">biosensor</span></div></div>
   
   
 </div>
@@ -2161,7 +2185,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsGraphene</span><span class="tag">nanowires and nanotubes grown by chemical vapor deposition (CVD) for biosensors</span><span class="tag">microwave devices and integrated circuits and other electronic applications.Mid infrared type-II quantum cascade lasers based on MBE grown GaSb/InAs heterostructures for chemical sensing</span><span class="tag">countermeasures</span><span class="tag">and other optoelectronic applications.Long wavelength quantum well infrared photodetectors (QWIPs) based on MBE and MOCVD grown GaAs/AlGaAs heterostructures for sensing applications.High Electron Mobility Transistor (HEMT) and Heterojunction bipolar transistors (HBTs) based on MBE</span><span class="tag">CBE and MOCVD grown GaAs/AlGaAs and InGaAs/InAlAs heterostructures for high speed and high frequency communication applications.</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/pei-shin-shem-steven" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biosensor</span><span class="tag matched">integrated circuit</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">integrated circuit</span><span class="tag matched">biosensor</span></div></div>
   
   
 </div>
@@ -2174,7 +2198,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsArtificial Intelligence</span><span class="tag">Machine Learning</span><span class="tag">Computer Vision</span><span class="tag">Medicine</span><span class="tag">Healthcare</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/nguyen" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=e5Gbt20AAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span><span class="tag matched">artificial intelligence</span></div></div>
   
   
 </div>
@@ -2187,7 +2211,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsElectrocatalysis:The research in this area explores the fundamental advantages and limitations of the monolayer catalyst concept for design of highly active fuel cell anodes/cathodes. Our interest is centered to develop a better understanding of the effects of substrate (electronic effect and epitaxial strain) and the monolayer morphology on catalyst monolayer activity. The evaluation of these effects in different electrochemical reactions is one of the primary goals. The broader interest is to address the stability of monolayer catalysts and to identify the fundamental processes that are important for the catalyst monolayer morphology change</span><span class="tag">redistribution and longevity in particular electrochemical reactions.Sensors:The research in this area is focused on electrochemical interface as the natural transducer for sensing of different phenomena including</span><span class="tag">organic adsorption</span><span class="tag">DNA</span><span class="tag">protein sensing</span><span class="tag">gene recognition</span><span class="tag">bio-separation etc….The current efforts that are pursued in our group are the work on ultrasound sensor design using the high surface/volume ratio electrodes as the ultrasound transducers and the studies of phase separated magnetic/nonmagnetic nano-materials as the magnetic field sensors.Electrochemical Material Science and Nanofabrication:The research interests in this area include the studies of different processes occurring at the electrochemical interface like organic adsorption</span><span class="tag">de-alloying</span><span class="tag">deposition</span><span class="tag">etching</span><span class="tag">oxidation</span><span class="tag">electropolishing etc..in order to form organized hetero-epitaxial metal and oxide nanostructures</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/brankovic-stanko-r" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=wKkGECoAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">transducer</span><span class="tag matched">sensor design</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">sensor design</span><span class="tag matched">transducer</span></div></div>
   <p class="bio">Electrocatalysis:The research in this area explores the fundamental advantages and limitations of the monolayer catalyst concept for design of highly active fuel cell anodes/cathodes. Our interest is centered to develop a better understanding of the effects of substrate (electronic effect and epitaxial strain) and the monolayer morphology on catalyst monolayer activity. The evaluation of these eff</p>
   
 </div>
@@ -2200,7 +2224,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsMachine Learning and Signal Processing with applications to biomedicine</span><span class="tag">scene understanding and remote sensing</span><span class="tag">Statistical Inference</span><span class="tag">Supervised</span><span class="tag">Unsupervised and Semi-Supervised Learning</span><span class="tag">Transfer and Reinforcement Learning</span><span class="tag">Meta-Learning</span><span class="tag">Sparse Representations.</span></div>
   <div class="actions"><span class="no-email">Email not found</span> <a href="https://www.ece.uh.edu/faculty/prasad" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=g_FRerIAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">reinforcement learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">reinforcement learning</span><span class="tag matched">machine learning</span></div></div>
   
   
 </div>
@@ -2510,7 +2534,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   
   <div class="actions"><a href="mailto:liu@ou.edu" class="btn email-btn">📧 liu@ou.edu</a> <a href="https://www.ou.edu/coe/ece/people/faculty/hong-liu.html" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">fluoroscopy</span><span class="tag matched">biomedical</span><span class="tag matched">x-ray</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">fluoroscopy</span><span class="tag matched">x-ray</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">Hong Liu, Ph.D., received his college education in Mechanical Engineering from Beijing Polytechnic University; and his Masters training in Applied Physics from Beijing University of Posts and Telecommunications. He received his Ph.D. in Biomedical Engineering from the Worcester Polytechnic Institute. His research interest is in medical imaging. His current projects include phase and phase contrast</p>
   
 </div>
@@ -2536,7 +2560,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   
   <div class="actions"><a href="mailto:javierjo@ou.edu" class="btn email-btn">📧 javierjo@ou.edu</a> <a href="https://www.ou.edu/coe/ece/people/faculty/javier-jo.html" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=qKVopXcAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">photonics</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">In 2002, Jo changed his research focus to the field of biophotonics and has continued working in this field since then. Prior to starting his academic appointments, he was a postdoctoral fellow within the Department of Surgery, at Cedars-Sinai Medical Center, Los Angeles (2002-2005), and a project scientist within the Department of Biomedical Engineering at the University of California, Davis (200</p>
   
 </div>
@@ -2575,7 +2599,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   
   <div class="actions"><a href="mailto:hougen@ou.edu" class="btn email-btn">📧 hougen@ou.edu</a> <a href="https://www.ou.edu/coe/cs/people/faculty/dean-hougen.html" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">neural network</span><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span><span class="tag matched">deep learning</span><span class="tag matched">reinforcement learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">reinforcement learning</span><span class="tag matched">artificial intelligence</span><span class="tag matched">neural network</span><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">Dr. Dean F. Hougen is a professor in the School of Computer Science at the University of Oklahoma. Dr. Hougen has a PhD in Computer Science and Engineering from the University of Minnesota, with a graduate minor in Cognitive Science, and a BS in Computer Science from Iowa State University with minors in Philosophy and Mathematics. His primary research involves artificial intelligence (AI), particu</p>
   
 </div>
@@ -2665,7 +2689,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:j.torniainen@uq.edu.au" class="btn email-btn">📧 j.torniainen@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/6144/jari-torniainen" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">medical image</span><span class="tag matched">biomedical</span><span class="tag matched">image processing</span><span class="tag matched">biomedical signal</span><span class="tag matched">photonics</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">medical image</span><span class="tag matched">image processing</span><span class="tag matched">biomedical</span><span class="tag matched">biomedical signal</span><span class="tag matched">photonics</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">Researcher biographyDr Torniainen's main research interests are in the fields of biomedical signal and image processing, biophotonics, and applied spectroscopy. He holds BSc/MSc in Electrical Engineering from Aalto University (Finland, 2015) and a PhD in Applied Physics from University of Eastern Finland (Finland, 2020). He has previously worked with developing preprocessing techniques for EEG/MEG</p>
   
 </div>
@@ -2678,7 +2702,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:hongfu.sun@uq.edu.au" class="btn email-btn">📧 hongfu.sun@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/3992/hongfu-sun" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">medical imaging</span><span class="tag matched">mri</span><span class="tag matched">biomedical</span><span class="tag matched">artificial intelligence</span><span class="tag matched">deep learning</span><span class="tag matched">image reconstruction</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">magnetic resonance</span><span class="tag matched">medical imaging</span><span class="tag matched">artificial intelligence</span><span class="tag matched">deep learning</span><span class="tag matched">mri</span><span class="tag matched">image reconstruction</span></div></div>
   <p class="bio">Researcher biographyDr Hongfu Sun completed his PhD in Biomedical Engineering at the University of Alberta in 2015, followed by postdoctoral training in Calgary until 2018. He joined the Imaging, Sensing and Biomedical Engineering team in the School of ITEE at UQ in 2019 and was awarded the ARC DECRA fellowship in 2021. His research interests include developing novel magnetic resonance imaging (MR</p>
   
 </div>
@@ -2691,7 +2715,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:adee@eait.uq.edu.au" class="btn email-btn">📧 adee@eait.uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/1958/aleksandar-rakic" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">semiconductor</span><span class="tag matched">photonics</span><span class="tag matched">biomedical</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">semiconductor</span><span class="tag matched">biomedical</span><span class="tag matched">medical imaging</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">Researcher biographyAleksandar D. Rakić leads the Photonics and Microwave Engineering  group at The University of Queensland focusing on the development of technologies for sensing and imaging across the electromagnetic spectrum including microwave, terahertz wave and optical systems.Professor Rakić's research focuses on the principles of laser feedback interferometry with semiconductor lasers, an</p>
   
 </div>
@@ -2704,7 +2728,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:m.mounaix@uq.edu.au" class="btn email-btn">📧 m.mounaix@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/1352/mickael-mounaix" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">photonics</span><span class="tag matched">biomedical</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">medical imaging</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">Researcher biographyPhD project fully funded available now!My main research area is the control of the spatial and spectral/temporal properties of light, particularly through complex disordered photonics materials such as multimode optical fibers, white paint, fog or biological tissues. The scattering of light through these materials inhibits many applications such as biomedical imaging and optica</p>
   
 </div>
@@ -2717,7 +2741,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:shekhar.chandra@uq.edu.au" class="btn email-btn">📧 shekhar.chandra@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/2687/shakes-chandra" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">medical imaging</span><span class="tag matched">medical image</span><span class="tag matched">artificial intelligence</span><span class="tag matched">image processing</span><span class="tag matched">deep learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">medical image</span><span class="tag matched">image processing</span><span class="tag matched">medical imaging</span><span class="tag matched">artificial intelligence</span><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">Researcher biographyShakes an imaging expert that leads a strong deep learning, artificial intelligence (AI) focused research team interested in medical image analysis and signal/image processing applied to many areas of science and medicine. He received his Ph.D in Theoretical Physics from Monash University, Melbourne and has been involved in applying machine learning in medical imaging for over </p>
   
 </div>
@@ -2730,7 +2754,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:s.barbieri@uq.edu.au" class="btn email-btn">📧 s.barbieri@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/10455/sebastiano-barbieri" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">federated learning</span><span class="tag matched">image processing</span><span class="tag matched">medical image</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">medical image</span><span class="tag matched">machine learning</span><span class="tag matched">image processing</span><span class="tag matched">federated learning</span></div></div>
   <p class="bio">Researcher biographyDr. Sebastiano Barbieriis Associate Professor and Principal Research Fellow at the Queensland Digital Health Centre, University of Queensland (UQ) and Adjunct Associate Professor at the Centre for Big Data Research in Health, University of New South Wales (UNSW). His work lies at the intersection of machine learning and healthcare, where he develops innovative computational met</p>
   
 </div>
@@ -2743,7 +2767,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:alina.bialkowski@uq.edu.au" class="btn email-btn">📧 alina.bialkowski@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/1289/alina-bialkowski" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span><span class="tag matched">artificial intelligence</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">Researcher biographyDr Alina Bialkowski is a computer vision &amp; machine learning researcher developing interpretable machine learning models to increase the performance and transparency of Artificial Intelligence (AI) decision-making. Her research interests include quantifying and extracting actionable knowledge from data to solve real-world problems and giving human understanding to AI models thro</p>
   
 </div>
@@ -2756,7 +2780,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:saskia.bollmann@uq.edu.au" class="btn email-btn">📧 saskia.bollmann@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/6739/saskia-bollmann" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">fmri</span><span class="tag matched">mri</span><span class="tag matched">biomedical</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">fmri</span><span class="tag matched">magnetic resonance</span><span class="tag matched">mri</span><span class="tag matched">biomedical</span></div></div>
   <p class="bio">Researcher biographyI obtained my M.Sc. ETH in Biomedical Engineering from the Swiss Federal Institute of Technology Zurich in 2013, where I utilized concurrent magnetic field monitoring to improve image quality and temporal stability of functional magnetic resonance imaging (fMRI). I then moved to Brisbane in 2014, to pursue a PhD at the Centre for Advanced Imaging, The University of Queensland u</p>
   
 </div>
@@ -2769,7 +2793,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:s.bollmann@uq.edu.au" class="btn email-btn">📧 s.bollmann@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/2705/steffen-bollmann" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">magnetic resonance</span><span class="tag matched">mri</span><span class="tag matched">image segmentation</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">image segmentation</span><span class="tag matched">mri</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Researcher biographyDr Steffen Bollmann joined UQ's School of Electrical Imaging and Computer Science in 2020 where he leads the Computational Imaging Group. The Group is developing computational methods to extract clinical and biological insights from magnetic resonance imaging (MRI) data. The aim is to make cutting-edge algorithms and tools available to a wide range of clinicians and researchers</p>
   
 </div>
@@ -2782,7 +2806,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:c.m.dobbins@uq.edu.au" class="btn email-btn">📧 c.m.dobbins@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/1364/chelsea-dobbins" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">wearable sensor</span><span class="tag matched">wearable</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">machine learning</span><span class="tag matched">wearable sensor</span></div></div>
   <p class="bio">Researcher biographyDr Chelsea Dobbins is an Associate Professor within the School of Electrical Engineering and Computer Science (EECS) at The University of Queensland. She has a background in Software Engineering with expertise in Digital Signal Processing, Applied Machine Learning, and Human–Computer Interaction.Her research focuses on the use of sensing technologies and intelligent data analys</p>
   
 </div>
@@ -2795,7 +2819,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:m.barth@uq.edu.au" class="btn email-btn">📧 m.barth@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/2678/markus-barth" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">magnetic resonance</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">biomedical</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">Researcher biographyMarkus graduated from the Vienna University of Technology in Technical Physics in 1995 and was awarded his Doctorate in 1999 after which he worked as postdoctoral research associate and then Assistant Professor at the Department of Radiodiagnostics, Medical University Vienna (AT). From 2004 he worked as Senior Researcher at the Donders Institute for Brain, Cognition and Behavio</p>
   
 </div>
@@ -2808,7 +2832,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:alej.melendez@uq.edu.au" class="btn email-btn">📧 alej.melendez@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/1565/alejandro-melendez-calderon" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">wearable</span><span class="tag matched">wearable device</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">wearable device</span><span class="tag matched">biomedical</span></div></div>
   <p class="bio">Researcher biographyDr. Alejandro Melendez-Calderon has an interdisciplinary background in robotics and biomedical engineering with extensive experience in human augmentation technologies used in medicine (robotics, wearable devices) and computational approaches to understand human neuromuscular control (unimpaired, stroke and SCI population). He has over 20 years of experience gained in academic,</p>
   
 </div>
@@ -2821,7 +2845,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:t.shaw@uq.edu.au" class="btn email-btn">📧 t.shaw@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/3995/thomas-shaw" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">biomedical</span><span class="tag matched">mri</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">mri</span><span class="tag matched">biomedical</span></div></div>
   <p class="bio">Researcher biographyDr Thomas B. Shawis a neuroscientist and MRI researcher at The University of Queensland whose work focuses on developing advanced neuroimaging biomarkers forMotor Neuron Disease (MND)and related neurodegenerative disorders. He leads research at the intersection ofultra-high-field MRI,computational image analysis, andbiomedical AI, aiming to identify early markers of disease pro</p>
   
 </div>
@@ -2912,7 +2936,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:shreya.ghosh@uq.edu.au" class="btn email-btn">📧 shreya.ghosh@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/12367/shreya-ghosh" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">computer vision</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Researcher biographyI am a Lecturer (Assistant Professor) of Applied Artificial Intelligence in theSchool of Electrical Engineering and Computer ScienceatThe University of Queensland.My research spans inAffective ComputingandHuman Behaviour UnderstandingusingComputer VisionandMachine Learningtechniques. I have prior experience in working with multimodal data such as image, video, text and physiolo</p>
   
 </div>
@@ -2925,7 +2949,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:timothy.miller@uq.edu.au" class="btn email-btn">📧 timothy.miller@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/9477/tim-miller" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span><span class="tag matched">reinforcement learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">reinforcement learning</span><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Researcher biographyI am a Professor of Artificial Intelligence in theSchool of Electrical Engineering and Computer ScienceatThe University of Queensland, Meaanjin/Brisbane, Australia.My research draws onmachine learning, reinforcement learning, AI planning, interaction design, and cognitive science, to help people tomake better decisions. I have done work on areas including explainable AI, human-</p>
   
 </div>
@@ -2951,7 +2975,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:archie.chapman@uq.edu.au" class="btn email-btn">📧 archie.chapman@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/1451/archie-chapman" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Researcher biographyDr Archie Chapman is an Associate Professor in Computer Science in the School of Electrical Engineering and Computer Science.Archie develops and applies principled artificial intelligence, game theory, optimisation and machine learning methods to solve large-scale and dynamic allocation, scheduling and queuing problems. His recent research has focused on applications of these t</p>
   
 </div>
@@ -2964,7 +2988,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:marcusg@eecs.uq.edu.au" class="btn email-btn">📧 marcusg@eecs.uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/1955/marcus-gallagher" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Researcher biographyMarcus Gallagher is an Associate Professor in the School of Electrical Engineering and Computer Science. His research interests are in the foundations of artificial intelligence, including optimisation and machine learning algorithms. He is particularly interested in understanding the relationship between algorithm performance and problem structure via benchmarking. His researc</p>
   
 </div>
@@ -2990,7 +3014,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:sen.wang@uq.edu.au" class="btn email-btn">📧 sen.wang@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/2540/sen-wang" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">deep learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">deep learning</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">Researcher biographyDr Sen Wang is an ARC DECRA Senior Research Fellow and Senior Lecturer in computer science and data science at the School of Information Technology and Electrical Engineering at UQ. He is also a CI on several health data analytics research grants. Sen has an interest in ICU data and has clinical collaborations with RBWH and Children's Hospital. Dr Wang received his PhD degree i</p>
   
 </div>
@@ -3003,7 +3027,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:j.wiles@uq.edu.au" class="btn email-btn">📧 j.wiles@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/2444/janet-wiles" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Researcher biographyJanet Wiles is a Professor in Human Centred Computing at the University of Queensland.Her multidisciplinary team co-designs language technologies to support people living with dementia and their carers and social robots for applications in health, education, and neuroscience. She is currently developing a citizen science project which uses insights from neuroscience, AI and lan</p>
   
 </div>
@@ -3042,7 +3066,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:shuai.wang2@uq.edu.au" class="btn email-btn">📧 shuai.wang2@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/5452/shuai-wang" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">natural language processing</span><span class="tag matched">ai-driven</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">ai-driven</span><span class="tag matched">natural language processing</span></div></div>
   <p class="bio">Researcher biographyShuai Wang is a Postdoctoral Research Fellow atielab(led byProfessor Guido Zuccon) at The University of Queensland. His research focuses on information retrieval (IR), large language models (LLMs), and natural language processing (NLP), with particular emphasis on developing AI-driven systems for knowledge-intensive tasks.Shuai completed his PhD on automating medical systematic</p>
   
 </div>
@@ -3055,7 +3079,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">View researcher profile</span></div>
   <div class="actions"><a href="mailto:p.moghadam@uq.edu.au" class="btn email-btn">📧 p.moghadam@uq.edu.au</a> <a href="https://eecs.uq.edu.au/profile/2657/peyman-moghadam" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">Researcher biographyPeyman Moghadam is an Adjunct Associate Professor at the University of Queensland (UQ). He is a Principal Research Scientist at CSIRO Data61 as well as Professor (Adjunct) at the Queensland University of Technology (QUT). He leads the Embodied AI Research Cluster at CSIRO Data61, working at the intersection of Robotics and Machine learning. He is also the Spatiotemporal AI port</p>
   
 </div>
@@ -3535,7 +3559,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research Summary(1) biomedical technologies based on self-focusing acoustic transducers</span><span class="tag">(2) wearable hearing/listening systems based on acoustic MEMS</span><span class="tag">(3) power generation from human movement without loading/limiting the human</span><span class="tag">(4) tamper detection for semiconductor chip authenticity</span><span class="tag">(5) bulk acoustic-wave tweezers</span><span class="tag">(6) bulk acoustic-wave resonators at GHz</span><span class="tag">etc.Eun Sok Kim Research Summary</span></div>
   <div class="actions"><a href="mailto:740-4697eskim@usc.edu" class="btn email-btn">📧 740-4697eskim@usc.edu</a> <a href="https://minghsiehece.usc.edu/directory/faculty/profile/?lname=Kim&amp;fname=Eun-Sok" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=LZep_c0AAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">semiconductor</span><span class="tag matched">transducer</span><span class="tag matched">mems</span><span class="tag matched">biomedical</span><span class="tag matched">wearable</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">biomedical</span><span class="tag matched">mems</span><span class="tag matched">transducer</span><span class="tag matched">semiconductor</span></div></div>
   <p class="bio">BiographyProf. Kim's doctoral dissertation in 1990 was on the integrated microphone with LSI CMOS on a single chip. In Fall 1999, he joined the University of Southern California, Los Angeles, where he is currently a Professor of the Ming Hsieh Department of Electrical and Computer Engineering-Electrophysics. From July 1, 2009 to June 30, 2018, he chaired the Electrophysics division of the departme</p>
   
 </div>
@@ -3561,7 +3585,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research SummaryNano-fabrication</span><span class="tag">energy harvesting</span><span class="tag">energy efficient lighting</span><span class="tag">oxide electronics (i.e. memristor)</span><span class="tag">optical meta-materials</span><span class="tag">and surface enhanced Raman sensors</span></div>
   <div class="actions"><a href="mailto:740-3085wu.w@usc.edu" class="btn email-btn">📧 740-3085wu.w@usc.edu</a> <a href="https://minghsiehece.usc.edu/directory/faculty/profile/?lname=Wu&amp;fname=Wei" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=zglpRu0AAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">photonics</span><span class="tag matched">mri</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">mri</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">BiographyWei Wu graduated from Peking University with a BS in Physics in 1996 and received a Ph.D. in Electrical Engineering from Princeton University in 2003. He is a Professor at the Ming Hsieh Department of Electrical and Computer Engineering, University of Southern California. Before joining USC in 2012, he had worked as a research associate, scientist, and senior scientist at HP Labs. His wor</p>
   
 </div>
@@ -3574,7 +3598,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research SummaryZhou's research interests include nanoelectronics and nanotechnology  molecular electronics  mesoscopic physics  MEMs and bioMEMs.Chongwu Zhou Research Summary</span></div>
   <div class="actions"><a href="mailto:740-4708chongwuz@usc.edu" class="btn email-btn">📧 740-4708chongwuz@usc.edu</a> <a href="https://minghsiehece.usc.edu/directory/faculty/profile/?lname=Zhou&amp;fname=Chongwu" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">nanoelectronics</span><span class="tag matched">mems</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">mems</span><span class="tag matched">nanoelectronics</span></div></div>
   <p class="bio">BiographyDr. Chongwu Zhou is a full professor of Department of Electrical Engineering at University of Southern California (USC). He previously held positions of the Jack Munushian Associate Professor (2006 - 2011) and Assistant Professor (2000 - 2006) at USC. He received Ph.D. in Electrical Engineering from Yale University in 1999, and worked as a postdoc at Stanford University from 1998 to 2000.</p>
   
 </div>
@@ -3638,7 +3662,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsAnalog/Mixed-Signal Integrated CircuitsInductive</span><span class="tag">Ultrasonic</span><span class="tag">and Thermoelectric Energy HarvestingImplantable and Wearable Biomedical DevicesMiniature Neural Interface Implants</span></div>
   <div class="actions"><a href="mailto:yjia@austin.utexas.edu" class="btn email-btn">📧 yjia@austin.utexas.edu</a> <a href="https://www.ece.utexas.edu/people/faculty/yaoyao-jia" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">implantable</span><span class="tag matched">mixed-signal</span><span class="tag matched">neural interface</span><span class="tag matched">biomedical</span><span class="tag matched">integrated circuit</span><span class="tag matched">wearable</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">wearable</span><span class="tag matched">implantable</span><span class="tag matched">biomedical</span><span class="tag matched">neural interface</span><span class="tag matched">mixed-signal</span><span class="tag matched">integrated circuit</span></div></div>
   <p class="bio">About</p>
   
 </div>
@@ -3677,7 +3701,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsDesign automation for digital/analog/mixed-signal ICs and systemsDesign for manufacturability/reliability/securityMachine learning and hardware accelerationOptical computing and interconnectCAD for emerging technologies and applicationsVertical integration of architecture</span><span class="tag">CAD/circuit</span><span class="tag">and technology</span></div>
   <div class="actions"><a href="mailto:dpan@mail.utexas.edu" class="btn email-btn">📧 dpan@mail.utexas.edu</a> <a href="https://www.ece.utexas.edu/people/faculty/david-z-pan" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=3aLlroEAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">mixed-signal</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">mixed-signal</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">About</p>
   
 </div>
@@ -3703,7 +3727,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsComputational magnetic resonance imagingMachine LearningClinical Translation</span></div>
   <div class="actions"><a href="mailto:jtamir@utexas.edu" class="btn email-btn">📧 jtamir@utexas.edu</a> <a href="https://www.ece.utexas.edu/people/faculty/jon-tamir" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?hl=en&amp;user=F_6aatkAAAAJ" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">magnetic resonance</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">machine learning</span></div></div>
   <p class="bio">About</p>
   
 </div>
@@ -3716,7 +3740,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsSilicon micromachining / MEMSAcoustics and dynamicsOptics and photonicsAdvanced transducer developmentTechnology transfer</span></div>
   <div class="actions"><a href="mailto:nahall@mail.utexas.edu" class="btn email-btn">📧 nahall@mail.utexas.edu</a> <a href="https://www.ece.utexas.edu/people/faculty/neal-hall" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=MiPFR8YAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">transducer</span><span class="tag matched">photonics</span><span class="tag matched">mems</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">mems</span><span class="tag matched">transducer</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">About</p>
   
 </div>
@@ -3729,7 +3753,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsMicrowave</span><span class="tag">mm-wave</span><span class="tag">and sub-THz acousticsThin-film piezoelectric MEMS and microsystemsRF front-end components: resonators</span><span class="tag">filters</span><span class="tag">delay lines</span><span class="tag">and oscillatorsUltrasound transducers and acoustic sensingHybrid acoustic microsystems for photonics</span><span class="tag">magnetics</span><span class="tag">and quantum systemsNonlinear and nonreciprocal acoustic devices</span></div>
   <div class="actions"><a href="mailto:ruochen@utexas.edu" class="btn email-btn">📧 ruochen@utexas.edu</a> <a href="https://www.ece.utexas.edu/people/faculty/ruochen-lu" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=yJo453cAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">transducer</span><span class="tag matched">photonics</span><span class="tag matched">mems</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">mems</span><span class="tag matched">transducer</span><span class="tag matched">photonics</span></div></div>
   <p class="bio">About</p>
   
 </div>
@@ -3768,7 +3792,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsBuilding Energy and EnvironmentsApplications of optimization and Artificial Intelligence in power gridselectrified transportation systemssmart buildings and smart citiesDeveloping multi-agent optimization and distributed machine learning methodsintegration of clean energy sources</span></div>
   <div class="actions"><a href="mailto:javadm@utexas.edu" class="btn email-btn">📧 javadm@utexas.edu</a> <a href="https://www.ece.utexas.edu/people/faculty/javad-mohammadi" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">About</p>
   
 </div>
@@ -3781,7 +3805,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   <div class="tags"><span class="tag">Research InterestsOptimizationMachine LearningArtificial Intelligence</span></div>
   <div class="actions"><a href="mailto:mokhtari@austin.utexas.edu" class="btn email-btn">📧 mokhtari@austin.utexas.edu</a> <a href="https://www.ece.utexas.edu/people/faculty/aryan-mokhtari" target="_blank" class="btn profile-btn">🔗 Profile</a> <a href="https://scholar.google.com/citations?user=glcep6EAAAAJ&amp;hl=en" target="_blank" class="btn scholar-btn">🎓 Scholar</a></div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">artificial intelligence</span><span class="tag matched">machine learning</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">machine learning</span><span class="tag matched">artificial intelligence</span></div></div>
   <p class="bio">About</p>
   
 </div>
@@ -4144,7 +4168,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   
   <div class="actions"><a href="mailto:jpipe@wisc.edu" class="btn email-btn">📧 jpipe@wisc.edu</a> <a href="https://directory.engr.wisc.edu/ece/Faculty/Pipe_James/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">magnetic resonance</span><span class="tag matched">radiology</span><span class="tag matched">biomedical</span><span class="tag matched">mri</span><span class="tag matched">image reconstruction</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">biomedical</span><span class="tag matched">magnetic resonance</span><span class="tag matched">radiology</span><span class="tag matched">mri</span><span class="tag matched">image reconstruction</span></div></div>
   <p class="bio">Professor Pipe is an Electrical and Biomedical Engineer by training and works in clinical settings to design and develop diagnostic Magnetic Resonance Imaging.He recently joined UW as a Visiting Professor and the Director of High Value MRI in the department of Radiology, with affiliate appointments in Electrical and Computer Engineering and Medical Physics.  He is a Fellow and Past President of th</p>
   
 </div>
@@ -4157,7 +4181,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   
   <div class="actions"><a href="mailto:abmcmillan@wisc.edu" class="btn email-btn">📧 abmcmillan@wisc.edu</a> <a href="https://directory.engr.wisc.edu/bme/Faculty/Mcmillan_Alan/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">pet imaging</span><span class="tag matched">biomedical</span><span class="tag matched">mri</span><span class="tag matched">radiology</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">radiology</span><span class="tag matched">mri</span><span class="tag matched">biomedical</span><span class="tag matched">pet imaging</span></div></div>
   <p class="bio">Alan B. McMillan, PhD, is a Professor of Clinical Health Sciences within the Department of Radiology at the University of Wisconsin-Madison. He obtained his Bachelor of Science, Master of Science, and PhD in Biomedical Engineering at UW-Madison. He is currently directs the Molecular Imaging Technology Research Program (MITRP), where the team’s focus is to integrate advanced modeling, data science,</p>
   
 </div>
@@ -4196,7 +4220,7 @@ Director, Florida Semiconductor Institute</p></div>
   
   
   <div class="actions"><a href="mailto:tvarghese@wisc.edu" class="btn email-btn">📧 tvarghese@wisc.edu</a> <a href="https://directory.engr.wisc.edu/bme/Faculty/Varghese_Tomy/" target="_blank" class="btn profile-btn">🔗 Profile</a> </div>
-  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">image processing</span><span class="tag matched">mri</span><span class="tag matched">medical imaging</span></div></div>
+  <div class="section"><h4>🎯 Matched Keywords</h4><div class="tags"><span class="tag matched">mri</span><span class="tag matched">image processing</span><span class="tag matched">medical imaging</span></div></div>
   <p class="bio">My current research deals with the development of Elastography. Elastography is rapidly developing into a new ultrasonic imaging modality, capable of producing images of internal strain or tissue elasticity. Elastography is a method for imaging the elastic properties of compliant tissues, producing gray scale strain images referred to as elastograms. You can think of Elastography as a &quot;high tech&quot; </p>
   
 </div>
@@ -4321,6 +4345,23 @@ Director, Florida Semiconductor Institute</p></div>
   </div>
 </div>
 
+<!-- CONFIG MODAL -->
+<div class="modal-overlay" id="config-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Configure Keywords</h2>
+      <button class="close-modal" id="close-modal">&times;</button>
+    </div>
+    <div id="keywords-container">
+        <!-- Dynamic keyword inputs will go here -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" id="btn-cancel">Cancel</button>
+      <button class="btn-save" id="btn-save">Save Configuration</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const search=document.getElementById('search');
 const cards=document.querySelectorAll('.card');
@@ -4395,6 +4436,74 @@ startBtn.addEventListener('click', async () => {
             startBtn.innerText = '🚀 Start New Scan';
             startBtn.classList.remove('running');
         }
+    }
+});
+
+// CONFIG MODAL HANDLER
+const configBtn = document.getElementById('config-btn');
+const configModal = document.getElementById('config-modal');
+const closeModal = document.getElementById('close-modal');
+const btnCancel = document.getElementById('btn-cancel');
+const btnSave = document.getElementById('btn-save');
+const kwContainer = document.getElementById('keywords-container');
+
+configBtn.addEventListener('click', async () => {
+    kwContainer.innerHTML = '<p style="text-align:center;padding:2rem;">Loading keywords...</p>';
+    configModal.style.display = 'flex';
+    
+    try {
+        const response = await fetch('/get_keywords');
+        const keywords = await response.json();
+        
+        kwContainer.innerHTML = '';
+        Object.entries(keywords).forEach(([category, list]) => {
+            const group = document.createElement('div');
+            group.className = 'kw-group';
+            group.innerHTML = `
+                <label class="kw-label">${category.replace(/_/g, ' ')}</label>
+                <textarea class="kw-input" data-category="${category}">${list.join(', ')}</textarea>
+            `;
+            kwContainer.appendChild(group);
+        });
+    } catch (e) {
+        kwContainer.innerHTML = '<p style="color:var(--red);text-align:center;padding:2rem;">Failed to load keywords.</p>';
+    }
+});
+
+const hideModal = () => configModal.style.display = 'none';
+closeModal.addEventListener('click', hideModal);
+btnCancel.addEventListener('click', hideModal);
+
+btnSave.addEventListener('click', async () => {
+    const textareas = kwContainer.querySelectorAll('textarea');
+    const newKeywords = {};
+    
+    textareas.forEach(ta => {
+        const category = ta.dataset.category;
+        const list = ta.value.split(',').map(s => s.trim()).filter(s => s.length > 0);
+        newKeywords[category] = list;
+    });
+    
+    btnSave.innerText = '⌛ Saving...';
+    btnSave.disabled = true;
+    
+    try {
+        const response = await fetch('/save_keywords', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newKeywords)
+        });
+        if (response.ok) {
+            hideModal();
+            alert('Configuration saved! Next scan will use new keywords.');
+        } else {
+            alert('Failed to save configuration.');
+        }
+    } catch (e) {
+        alert('Error saving configuration.');
+    } finally {
+        btnSave.innerText = 'Save Configuration';
+        btnSave.disabled = false;
     }
 });
 

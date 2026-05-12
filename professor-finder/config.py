@@ -3,11 +3,14 @@ Configuration for AdvisorScout.
 Contains QS-ranked university lists, search keywords, and scraper settings.
 """
 
+import os
+import json
+
 # ============================================================
 # SEARCH KEYWORDS — Professors matching these will be collected
 # ============================================================
 
-SEARCH_KEYWORDS = {
+DEFAULT_KEYWORDS = {
     "device_design": [
         "device design", "device fabrication", "mems", "nems",
         "semiconductor", "integrated circuit", "ic design",
@@ -49,6 +52,20 @@ SEARCH_KEYWORDS = {
         "electrophysiology", "biomedical signal",
     ],
 }
+
+# Load keywords from local JSON if exists, otherwise use defaults
+KEYWORDS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "keywords.json")
+
+def load_keywords():
+    if os.path.exists(KEYWORDS_FILE):
+        try:
+            with open(KEYWORDS_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return DEFAULT_KEYWORDS
+    return DEFAULT_KEYWORDS
+
+SEARCH_KEYWORDS = load_keywords()
 
 # ============================================================
 # SCRAPER SETTINGS

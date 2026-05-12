@@ -123,6 +123,24 @@ body{{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);lin
 .start-btn:active{{transform:translateY(0)}}
 .start-btn.running{{background:var(--orange);box-shadow:0 8px 25px rgba(255,159,67,0.3);cursor:wait}}
 
+/* Config Button */
+.config-box{{margin-bottom:2rem}}
+.config-btn{{width:100%;padding:1rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:16px;color:var(--text);font-weight:600;font-size:0.9rem;cursor:pointer;transition:all .3s ease;display:flex;align-items:center;justify-content:center;gap:10px}}
+.config-btn:hover{{background:rgba(255,255,255,0.1);border-color:var(--accent)}}
+
+/* Modal Styles */
+.modal-overlay{{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:1000}}
+.modal-content{{background:var(--surface);border:1px solid var(--border);border-radius:24px;width:90%;max-width:800px;max-height:90vh;overflow-y:auto;padding:2.5rem;box-shadow:0 25px 50px rgba(0,0,0,0.5)}}
+.modal-header{{display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem}}
+.modal-header h2{{font-size:1.5rem;background:linear-gradient(135deg,var(--accent2),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent}}
+.close-modal{{background:none;border:none;color:var(--text2);font-size:1.5rem;cursor:pointer}}
+.kw-group{{margin-bottom:1.5rem;background:var(--glass);padding:1.5rem;border-radius:16px;border:1px solid var(--border)}}
+.kw-label{{display:block;font-size:0.8rem;color:var(--accent2);font-weight:700;margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:1px}}
+.kw-input{{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:12px;color:var(--text);padding:1rem;font-family:inherit;font-size:0.9rem;min-height:80px;resize:vertical}}
+.modal-footer{{display:flex;justify-content:flex-end;gap:1rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}}
+.btn-save{{padding:0.8rem 2rem;background:var(--accent);color:white;border:none;border-radius:12px;font-weight:700;cursor:pointer}}
+.btn-cancel{{padding:0.8rem 2rem;background:none;color:var(--text2);border:none;cursor:pointer}}
+
 /* Progress Section */
 .live-status{{background:rgba(125,95,255,0.05);border:1px solid rgba(125,95,255,0.2);border-radius:16px;padding:1.2rem;margin-bottom:2rem}}
 .status-header{{display:flex;justify-content:space-between;margin-bottom:0.5rem}}
@@ -214,6 +232,12 @@ body{{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);lin
     </button>
   </div>
 
+  <div class="config-box">
+    <button class="config-btn" id="config-btn">
+        ⚙️ Configure Keywords
+    </button>
+  </div>
+
   <!-- LIVE PROGRESS SECTION -->
   <div class="live-status" id="live-status">
     <div class="status-header">
@@ -264,6 +288,23 @@ body{{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);lin
 <div class="main-content">
   <div class="container" id="report-container">
     {professor_cards}
+  </div>
+</div>
+
+<!-- CONFIG MODAL -->
+<div class="modal-overlay" id="config-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Configure Keywords</h2>
+      <button class="close-modal" id="close-modal">&times;</button>
+    </div>
+    <div id="keywords-container">
+        <!-- Dynamic keyword inputs will go here -->
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" id="btn-cancel">Cancel</button>
+      <button class="btn-save" id="btn-save">Save Configuration</button>
+    </div>
   </div>
 </div>
 
@@ -341,6 +382,74 @@ startBtn.addEventListener('click', async () => {{
             startBtn.innerText = '🚀 Start New Scan';
             startBtn.classList.remove('running');
         }}
+    }}
+}});
+
+// CONFIG MODAL HANDLER
+const configBtn = document.getElementById('config-btn');
+const configModal = document.getElementById('config-modal');
+const closeModal = document.getElementById('close-modal');
+const btnCancel = document.getElementById('btn-cancel');
+const btnSave = document.getElementById('btn-save');
+const kwContainer = document.getElementById('keywords-container');
+
+configBtn.addEventListener('click', async () => {{
+    kwContainer.innerHTML = '<p style="text-align:center;padding:2rem;">Loading keywords...</p>';
+    configModal.style.display = 'flex';
+    
+    try {{
+        const response = await fetch('/get_keywords');
+        const keywords = await response.json();
+        
+        kwContainer.innerHTML = '';
+        Object.entries(keywords).forEach(([category, list]) => {{
+            const group = document.createElement('div');
+            group.className = 'kw-group';
+            group.innerHTML = `
+                <label class="kw-label">${{category.replace(/_/g, ' ')}}</label>
+                <textarea class="kw-input" data-category="${{category}}">${{list.join(', ')}}</textarea>
+            `;
+            kwContainer.appendChild(group);
+        }});
+    }} catch (e) {{
+        kwContainer.innerHTML = '<p style="color:var(--red);text-align:center;padding:2rem;">Failed to load keywords.</p>';
+    }}
+}});
+
+const hideModal = () => configModal.style.display = 'none';
+closeModal.addEventListener('click', hideModal);
+btnCancel.addEventListener('click', hideModal);
+
+btnSave.addEventListener('click', async () => {{
+    const textareas = kwContainer.querySelectorAll('textarea');
+    const newKeywords = {{}};
+    
+    textareas.forEach(ta => {{
+        const category = ta.dataset.category;
+        const list = ta.value.split(',').map(s => s.trim()).filter(s => s.length > 0);
+        newKeywords[category] = list;
+    }});
+    
+    btnSave.innerText = '⌛ Saving...';
+    btnSave.disabled = true;
+    
+    try {{
+        const response = await fetch('/save_keywords', {{
+            method: 'POST',
+            headers: {{ 'Content-Type': 'application/json' }},
+            body: JSON.stringify(newKeywords)
+        }});
+        if (response.ok) {{
+            hideModal();
+            alert('Configuration saved! Next scan will use new keywords.');
+        }} else {{
+            alert('Failed to save configuration.');
+        }}
+    }} catch (e) {{
+        alert('Error saving configuration.');
+    }} finally {{
+        btnSave.innerText = 'Save Configuration';
+        btnSave.disabled = false;
     }}
 }});
 
