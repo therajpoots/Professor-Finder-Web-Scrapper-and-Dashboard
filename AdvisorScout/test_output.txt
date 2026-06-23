@@ -1,0 +1,12 @@
+Subject: Enthusiasm for Your Work in Flexible Sensors and AI-Driven Diagnostics
+
+Dear Professor Doe,
+
+I hope this message finds you well. My name is Rana Talha Khalid, and I am a final-year Biomedical Engineering student at NED University of Engineering & Technology in Pakistan, maintaining a CGPA of 3.8/4.0. I have been following your lab’s contributions with genuine admiration, and I felt compelled to reach out as I explore PhD opportunities that sit at the intersection of wearable biosensors and clinically meaningful AI.
+
+Your 2023 paper on flexible epidermal sensors left a deep impression on me. I was particularly excited by how you merged ultra-thin form factors with robust physiological signal acquisition, turning the skin into a window for continuous health monitoring. The emphasis on real-world comfort and signal fidelity resonated because I believe the future of diagnostics lies in devices that people will actually wear every day, not just in controlled environments. In my senior thesis, I am developing a low-cost, textile-integrated cardiac monitoring patch and experimenting with lightweight neural networks to detect arrhythmias from noisy ambulatory data. Your work has become a blueprint for how I think about bridging hardware ingenuity with intelligent interpretation.
+
+I would be honored to contribute to your group’s mission. I bring hands-on experience in sensor fabrication, embedded system design, and signal processing, along with a hunger to learn more about closed-loop diagnostic systems that learn from the body in motion. If your lab will be recruiting doctoral students for the coming cycle, I would be deeply grateful for the chance to discuss how my background might align with your vision. Thank you for your time and for the inspiration your research provides.
+
+Best regards,
+Rana Talha Khalid

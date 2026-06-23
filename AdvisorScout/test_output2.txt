@@ -1,0 +1,14 @@
+Subject: A dual-mode EIS approach to correct drift in multiplexed sweat sensing
+
+Dear Professor Chen,
+
+The multiplexed sweat patch you reported in Nature Biomedical Engineering elegantly solves the multi-analyte challenge, but the signal drift over hours remains the bottleneck for truly continuous monitoring. I’ve been thinking about whether the same impedance spectroscopy readout could serve a dual purpose—measuring metabolite concentrations while simultaneously tracking the electrode-skin interface impedance as a proxy for drift.
+
+I’m Rana Talha Khalid, a final-year biomedical engineering student at NED University (CGPA 3.8) with hands-on experience in electrochemical sensing and machine learning. For my BioMEMS glucose sensor, I used amperometric detection on a PDMS microfluidic chip, and I later built an LSTM-based arrhythmia classifier for ECG signals. These projects gave me a feel for sensor physics and time-series signal processing.
+
+So here’s the idea: what if an LSTM were trained on the dual-mode impedance data stream—analyte signal and interface impedance—to learn drift patterns and correct them in real time? Since your platform already uses impedance spectroscopy for readout, adding a low-frequency interface monitoring mode might be feasible without redesigning the hardware. This could push your patch’s accuracy from clinical-grade in short tests to reliable day-long profiles.
+
+I have direct experience with electrochemical impedance spectroscopy and embedded signal processing, so I understand the hardware and algorithmic demands this would entail. If this direction intrigues you, I’d be glad to share more details and hear your perspective. My CV is attached.
+
+Best regards,
+Rana Talha Khalid

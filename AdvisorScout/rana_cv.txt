@@ -1,0 +1,40 @@
+RANA TALHA KHALID
+Biomedical Engineer | Wearable Biosensors | AI for Healthcare | Medical Imaging | BioMEMS
+Email: ranatalhakhaliid@gmail.com | Talha.k.rajpoot@gmail.com
+Location: Pakistan
+CGPA: 3.77/4.00 | IELTS: 7.0
+ 
+CURRENT POSITION
+Lab Engineer — actively pursuing PhD opportunities in wearable health technology, biosensor research, and AI-driven diagnostics.
+ 
+EDUCATION
+B.Sc. Biomedical Engineering (CGPA: 3.77/4.00, IELTS: 7.0) — Riphah International University, Lahore, Pakistan (2021 - 2025)
+Relevant Coursework: Biomedical Signal Processing, Medical Imaging Systems, Machine Learning for Healthcare, Biosensors & Bioinstrumentation, BioMEMS, Digital Signal Processing, Neural Engineering, Microfluidics
+
+RESEARCH FOCUS
+Wearable cardiac diagnostics, biosensor design, and the intersection of surface engineering, signal processing, and AI for long-term, real-world clinical use. Particularly interested in solving the biofouling and signal degradation challenges that limit wearable biosensor viability in practice.
+
+PUBLICATIONS (Peer-Reviewed)
+1. Khalid R.T. et al. (Co-First Author) — PVDF-based self-powered wearable cardiac monitoring system. Nano Energy, Impact Factor: 16.8.
+2. Khalid R.T. et al. (Co-First Author) — AI-integrated biosensor system for intelligent diagnostics. Chemical Engineering Journal, Impact Factor: 13.4.
+3. First-author manuscript #1 — Currently under review (wearable diagnostics domain).
+4. First-author manuscript #2 — Currently under review (biosensor/AI domain).
+
+RESEARCH EXPERIENCE
+- Wearable cardiac diagnostics: developed PVDF-based piezoelectric sensors for self-powered ECG and cardiac monitoring
+- AI-integrated sensor systems: designed ML pipelines for biosensor signal interpretation and anomaly detection
+- Biosensor design and fabrication: electrochemical biosensors, microfluidic integration, PDMS fabrication
+- Signal processing: ECG, EEG, EMG — filtering, feature extraction, deep learning classification
+- Medical imaging: segmentation pipelines for diagnostic imaging (U-Net, ResNet architectures)
+
+TECHNICAL SKILLS
+Programming: Python, MATLAB, R
+Machine Learning: TensorFlow, PyTorch, Keras, scikit-learn, CNNs, LSTMs, Transformers, XAI methods
+Signal Processing: ECG, EEG, EMG acquisition, filtering, feature extraction, classification
+Medical Imaging: DICOM, image segmentation, U-Net, classification pipelines
+Hardware & Embedded: Arduino, Raspberry Pi, sensor interfacing, PCB design
+Biosensor Fabrication: electrochemical biosensors, PVDF piezoelectric films, microfluidic channels
+CAD & Device Design: SolidWorks, AutoCAD
+
+RESEARCH INTERESTS
+Wearable biosensors and continuous health monitoring, AI/ML for biomedical diagnostics, BioMEMS and microfluidic device design, surface engineering for long-term biosensor performance, explainable AI in clinical decision support, smart healthcare systems, flexible electronics and materials for biomedical sensing.

@@ -1,0 +1,47 @@
+You are writing a highly professional, technically precise cold email from Rana Talha Khalid (a Biomedical Engineering graduate and Lab Engineer) to a professor to inquire about a PhD position. The email must be direct, formal, and look completely written by Rana himself.
+
+ABSOLUTE RULES — VIOLATING ANY OF THESE WILL RENDER THE EMAIL UNACCEPTABLE:
+
+1. SUBJECT LINE FORMAT:
+   Must be exactly:
+   Subject: PhD Inquiry — [Topic A] & [Topic B]
+   Where [Topic A] and [Topic B] are two specific, technical research topics or techniques from the professor's latest work (e.g., self-powered implantable biosensors, cuff-less blood pressure monitoring, deep learning in healthcare, wearable cardiac sensing). Do NOT use generic placeholders like "Research Inquiry" or "PhD Position".
+
+2. FIRST PARAGRAPH (OPENER):
+   Must start exactly with:
+   Dear Prof. [Professor's Last Name],
+
+   I have been following your work on [Topic A] and [Topic B], and the alignment with my own research is close enough that I feel I should reach out directly.
+   (Replace [Topic A] and [Topic B] with the same topics from the subject line. If the professor has a title like Dr. or Assoc. Prof., use "Prof." as the default standard).
+
+3. SECOND PARAGRAPH (ACADEMIC PROFILE & PUBLICATIONS):
+   Must be exactly as follows, with no alterations:
+   I am a Biomedical Engineering graduate (CGPA 3.77/4.00, IELTS 7.0) from Riphah International University, Pakistan, currently working as a Lab Engineer while actively pursuing PhD opportunities. My research has focused on exactly the intersection your current projects occupy: [Field A], [Field B], and [Field C] (where you select 3 relevant fields matching the professor's work, e.g., wearable cardiac sensing, ECG-based diagnostics, self-powered sensor design, or explainable deep learning). This includes co-first-authored publications in Nano Energy (IF 16.8) on PVDF-based self-powered wearable physiological monitoring, and in Chemical Engineering Journal (IF 13.4) on AI-integrated ECG systems, alongside two first-author manuscripts currently under review — one specifically on ResNet-based ECG cardiac age estimation with explainability, and another on regulatory standardization of wearable biosensors.
+
+4. THIRD PARAGRAPH (ADAPTIVE RESEARCH CONNECTION):
+   This is where you connect Rana's specific technical skills and achievements to the professor's research topics. You must adaptively select the most relevant connection from Rana's CV based on the professor's profile:
+   - If the professor works on WEARABLE SENSORS, EMPOWERED/EMBEDDED HARDWARE, or PHYSIOLOGICAL SIGNAL PROCESSING:
+     Connect to Rana's development of UPEC (a handheld multi-modal ECG/PCG/PPG platform with custom analog front-end conditioning, embedded processing, and hybrid LSTM-CNN classifier achieving AUC > 97%). Discuss how designing custom analog circuits and processing continuous signals prepares him to contribute to their device-level designs from day one.
+   - If the professor works on ENERGY HARVESTING, PIEZOELECTRIC MATERIALS, PVDF, or FABRICATION:
+     Connect to Rana's hands-on experience in electrospinning PVDF films, fabricating flexible self-powered piezoelectric sensors, and mechanical energy harvesting for wearable cardiac and physiological monitoring (from his Nano Energy paper).
+   - If the professor works on AI/ML, COMPUTER VISION, or DIAGNOSTICS:
+     Connect to Rana's first-author under-review manuscript on ResNet-based ECG cardiac age estimation with explainability (Integrated Gradients/Grad-CAM), proving solid experience in custom neural network architectures, explainable AI (XAI) pipelines, and clinical validation.
+   - If the professor works on BIOSENSORS, MICROFLUIDICS, HYDROGELS, or DEVICE MODELING:
+     Connect to Rana's expertise in COMSOL Multiphysics modeling for hydrogel-based biosensors, PDMS microfabrication, and microfluidic channel integration.
+
+   Do not use generic, hand-waving AI sentences. Frame this connection in a professional, peer-to-peer tone (e.g., "My work on [X] has equipped me with [Y] which I can directly apply to your research on [Z]."). Write 3-4 sentences in this paragraph focusing heavily on concrete, technically precise details.
+
+5. FOURTH PARAGRAPH (CLOSING):
+   Must be exactly as follows, with no variations:
+   I would be very grateful for the opportunity to discuss potential PhD supervision. I am happy to share my CV, publications, or a research statement at your convenience.
+
+   Thank you for your time.
+
+   Best regards,
+   Rana Talha Khalid
+   Talha.k.rajpoot@gmail.com
+
+6. NO PLACEHOLDERS:
+   The generated email must contain zero bracketed items, zero generic text, and must be ready to send immediately.
+
+Ensure the final output only consists of the generated email (Subject and Body). Do not include any pre-ambles, introductory words, or conversational text. Start directly with the "Subject: ..." line.

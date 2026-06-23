@@ -54,7 +54,24 @@ def generate_html_report(professors: List[Professor], output_path: str):
                 tags = "".join(f'<span class="tag matched">{_esc(k)}</span>' for k in p.matched_keywords[:10])
                 matched_html = f'<div class="section"><h4>🎯 Matched Keywords</h4><div class="tags">{tags}</div></div>'
 
-            email_html = f'<a href="mailto:{_esc(p.email)}" class="btn email-btn">📧 {_esc(p.email)}</a>' if p.email else '<span class="no-email">Email not found</span>'
+            # Build data attributes for email composer (JSON-safe)
+            prof_json_safe = {
+                "name": p.name,
+                "university": p.university,
+                "department": p.department,
+                "title": p.title or "Faculty",
+                "email": p.email,
+                "bio": (p.bio or "")[:1200],
+                "interests": ", ".join(p.research_interests[:15]),
+                "matched_keywords": ", ".join(p.matched_keywords[:15]),
+                "profile_url": p.profile_url,
+            }
+            prof_json_str = json.dumps(prof_json_safe).replace('"', '&quot;')
+            compose_btn = f'<button class="btn compose-btn" data-prof="{prof_json_str}" onclick="openEmailModal(this)">✍️ Compose Email</button>'
+            if p.email:
+                email_html = f'<a href="mailto:{_esc(p.email)}" class="btn email-btn">📧 {_esc(p.email)}</a> {compose_btn}'
+            else:
+                email_html = f'<span class="no-email">Email not found</span> {compose_btn}'
             profile_html = f'<a href="{_esc(p.profile_url)}" target="_blank" class="btn profile-btn">🔗 Profile</a>' if p.profile_url else ""
             scholar_html = f'<a href="{_esc(p.scholar_url)}" target="_blank" class="btn scholar-btn">🎓 Scholar</a>' if p.scholar_url else ""
 
@@ -217,6 +234,42 @@ body{{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);lin
 ::-webkit-scrollbar-thumb{{background:var(--border);border-radius:10px}}
 ::-webkit-scrollbar-thumb:hover{{background:rgba(255,255,255,0.15)}}
 @media(max-width:900px){{body{{flex-direction:column;overflow:auto}}.sidebar{{width:100%;height:auto;overflow:visible;border-right:none;border-bottom:1px solid var(--border)}}.main-content{{height:auto;overflow:visible;padding:1.5rem}}.cards-grid{{grid-template-columns:1fr}}}}
+
+/* ── Email Compose Modal ── */
+.compose-btn{{background:rgba(179,164,255,0.12);color:var(--accent2);border:1px solid rgba(179,164,255,0.25);cursor:pointer;font-family:inherit;}}
+.compose-btn:hover{{background:rgba(179,164,255,0.22);transform:scale(1.02);}}
+.email-modal-overlay{{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(16px);display:none;align-items:center;justify-content:center;z-index:2000;animation:fadeIn .2s ease;}}
+.email-modal-overlay.active{{display:flex;}}
+@keyframes fadeIn{{from{{opacity:0}}to{{opacity:1}}}}
+.email-modal{{background:linear-gradient(145deg,#0e0e18,#13132a);border:1px solid rgba(125,95,255,0.3);border-radius:28px;width:92%;max-width:780px;max-height:92vh;overflow-y:auto;padding:2.5rem;box-shadow:0 30px 80px rgba(0,0,0,0.7),0 0 0 1px rgba(125,95,255,0.1) inset;}}
+.email-modal-header{{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;}}
+.email-modal-title{{display:flex;flex-direction:column;gap:4px;}}
+.email-modal-title h2{{font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,var(--accent2),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}}
+.email-modal-title .email-to{{font-size:.8rem;color:var(--text2);}}
+.email-modal-close{{background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:10px;color:var(--text2);font-size:1.2rem;width:36px;height:36px;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;}}
+.email-modal-close:hover{{background:rgba(255,255,255,0.12);color:var(--text);}}
+.email-generating{{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem;gap:1.5rem;}}
+.email-spinner{{width:52px;height:52px;border:3px solid rgba(125,95,255,0.15);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;}}
+@keyframes spin{{to{{transform:rotate(360deg)}}}}
+.email-spinner-text{{color:var(--text2);font-size:.9rem;text-align:center;}}
+.email-spinner-text strong{{color:var(--accent2);display:block;margin-bottom:4px;font-size:1rem;}}
+.email-form{{display:flex;flex-direction:column;gap:1.2rem;}}
+.email-field-label{{font-size:.72rem;color:var(--accent2);font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:.4rem;display:block;}}
+.email-subject-input{{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:12px;color:var(--text);padding:.9rem 1.1rem;font-family:'Outfit',sans-serif;font-size:.95rem;font-weight:600;outline:none;transition:border-color .2s;}}
+.email-subject-input:focus{{border-color:var(--accent);}}
+.email-body-input{{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:16px;color:var(--text);padding:1.2rem;font-family:'Outfit',sans-serif;font-size:.9rem;line-height:1.75;min-height:280px;resize:vertical;outline:none;transition:border-color .2s;}}
+.email-body-input:focus{{border-color:var(--accent);}}
+.email-modal-actions{{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.5rem;padding-top:1.5rem;border-top:1px solid var(--border);}}
+.btn-send{{padding:.85rem 2rem;background:linear-gradient(135deg,var(--accent),#6b4de0);color:white;border:none;border-radius:14px;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .25s;box-shadow:0 6px 20px rgba(125,95,255,0.3);font-family:inherit;}}
+.btn-send:hover{{transform:translateY(-2px);box-shadow:0 10px 28px rgba(125,95,255,0.45);}}
+.btn-send:active{{transform:translateY(0);}}
+.btn-copy{{padding:.85rem 1.6rem;background:rgba(0,210,173,0.1);color:var(--green);border:1px solid rgba(0,210,173,0.25);border-radius:14px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .25s;font-family:inherit;}}
+.btn-copy:hover{{background:rgba(0,210,173,0.18);}}
+.btn-regenerate{{padding:.85rem 1.4rem;background:rgba(255,255,255,0.05);color:var(--text2);border:1px solid var(--border);border-radius:14px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;font-family:inherit;margin-left:auto;}}
+.btn-regenerate:hover{{background:rgba(255,255,255,0.09);color:var(--text);}}
+.email-toast{{position:fixed;bottom:2rem;right:2rem;background:var(--surface);border:1px solid rgba(0,210,173,0.4);border-radius:14px;padding:.9rem 1.4rem;color:var(--green);font-size:.85rem;font-weight:600;z-index:9999;transform:translateY(80px);opacity:0;transition:all .35s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 25px rgba(0,0,0,0.4);}}
+.email-toast.show{{transform:translateY(0);opacity:1;}}
+.email-error{{background:rgba(255,107,107,0.08);border:1px solid rgba(255,107,107,0.25);border-radius:14px;padding:1.2rem 1.5rem;color:#ff9a9a;font-size:.85rem;line-height:1.6;}}
 </style></head>
 <body>
 <div class="sidebar">
@@ -236,6 +289,36 @@ body{{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);lin
     <button class="config-btn" id="config-btn">
         ⚙️ Configure Keywords
     </button>
+  </div>
+
+  <!-- MASS EMAIL BUTTON -->
+  <!-- MASS EMAIL BUTTONS -->
+  <div class="start-box" style="margin-bottom:1rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+    <button class="start-btn" id="mass-email-btn" style="background:linear-gradient(135deg, var(--accent), #6b4de0); box-shadow:0 8px 25px rgba(125,95,255,0.3); flex:1;">
+        📤 Automate Mass Emails
+    </button>
+    <button class="start-btn" id="stop-campaign-btn" style="background:linear-gradient(135deg,#e05050,#b02020); box-shadow:0 8px 25px rgba(200,50,50,0.3); display:none; flex:1;">
+        ⏹ Stop Campaign
+    </button>
+  </div>
+
+  <!-- CAMPAIGN PROGRESS LINK -->
+  <div class="config-box">
+    <a href="/campaign" target="_blank" class="config-btn" style="display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;">
+        📊 Campaign Progress
+    </a>
+  </div>
+
+  <!-- MASS EMAIL PROGRESS SECTION -->
+  <div class="live-status hidden" id="mass-email-status">
+    <div class="status-header">
+        <span class="status-title" id="mass-status-phase">Email Campaign</span>
+        <span class="status-percent" id="mass-status-percent">0/0</span>
+    </div>
+    <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="mass-status-bar" style="background:linear-gradient(90deg, var(--green), var(--blue));"></div>
+    </div>
+    <span class="status-text" id="mass-status-prof">Waiting...</span>
   </div>
 
   <!-- LIVE PROGRESS SECTION -->
@@ -290,6 +373,25 @@ body{{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);lin
     {professor_cards}
   </div>
 </div>
+
+<!-- EMAIL COMPOSE MODAL -->
+<div class="email-modal-overlay" id="email-modal-overlay">
+  <div class="email-modal" id="email-modal">
+    <div class="email-modal-header">
+      <div class="email-modal-title">
+        <h2 id="email-modal-prof-name">✍️ Compose Email</h2>
+        <span class="email-to" id="email-modal-to">Loading professor...</span>
+      </div>
+      <button class="email-modal-close" id="email-modal-close" title="Close">✕</button>
+    </div>
+    <div id="email-modal-body">
+      <!-- Content injected by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="email-toast" id="email-toast">✅ Copied to clipboard!</div>
 
 <!-- CONFIG MODAL -->
 <div class="modal-overlay" id="config-modal">
@@ -393,6 +495,97 @@ startBtn.addEventListener('click', async () => {{
         }}
     }}
 }});
+
+// MASS EMAIL BUTTON HANDLER
+const massEmailBtn = document.getElementById('mass-email-btn');
+const massEmailStatus = document.getElementById('mass-email-status');
+
+massEmailBtn.addEventListener('click', async () => {{
+    if (massEmailBtn.classList.contains('running')) return;
+    
+    if (confirm('Start automating emails to all professors? This will use the DeepSeek AI to compose personalized emails and send them via Gmail SMTP. Emails are sent every 15 seconds.')) {{
+        massEmailBtn.innerText = '⚙️ Campaign in progress...';
+        massEmailBtn.classList.add('running');
+        massEmailStatus.classList.remove('hidden');
+        try {{
+            const response = await fetch('/start_mass_email');
+            const data = await response.json();
+            console.log('Mass email started', data);
+            stopCampaignBtn.style.display = 'block';
+        }} catch (e) {{
+            alert('Failed to start mass email. Make sure app.py is running.');
+            massEmailBtn.innerText = '📤 Automate Mass Emails';
+            massEmailBtn.classList.remove('running');
+        }}
+    }}
+}});
+
+const stopCampaignBtn = document.getElementById('stop-campaign-btn');
+stopCampaignBtn.addEventListener('click', async () => {{
+    stopCampaignBtn.innerText = '⌛ Stopping...';
+    stopCampaignBtn.disabled = true;
+    try {{
+        await fetch('/stop_mass_email');
+    }} catch (e) {{
+        console.log('Stop request failed', e);
+    }}
+}});
+
+// MASS EMAIL POLLING
+async function pollMassEmailStatus() {{
+    try {{
+        const response = await fetch('mass_email_status.json?t=' + new Date().getTime());
+        if (response.ok) {{
+            const status = await response.json();
+
+            if (status.status === 'idle') return;
+
+            massEmailStatus.classList.remove('hidden');
+            document.getElementById('mass-status-prof').innerText = status.current_prof || 'Idle';
+
+            const total = status.total || 0;
+            const sent = status.sent || 0;
+            const failed = status.failed || 0;
+            const percent = total > 0 ? Math.round((sent / total) * 100) : 0;
+
+            document.getElementById('mass-status-percent').innerText = `${{sent}}/${{total}} (${{failed}} failed)`;
+            document.getElementById('mass-status-bar').style.width = percent + '%';
+
+            const isRunning = status.status === 'running';
+            const isDone = status.status === 'completed';
+            const isStopped = status.status === 'stopped';
+            const isError = status.status === 'error';
+
+            document.getElementById('mass-status-phase').innerText = status.status.toUpperCase();
+
+            if (isRunning) {{
+                massEmailBtn.innerText = '⚙️ Campaign in progress...';
+                massEmailBtn.classList.add('running');
+                stopCampaignBtn.style.display = 'block';
+                stopCampaignBtn.innerText = '⏹ Stop Campaign';
+                stopCampaignBtn.disabled = false;
+            }} else if (isDone) {{
+                massEmailBtn.innerText = '✅ Campaign Complete';
+                massEmailBtn.classList.remove('running');
+                stopCampaignBtn.style.display = 'none';
+            }} else if (isStopped) {{
+                massEmailBtn.innerText = '📤 Automate Mass Emails';
+                massEmailBtn.classList.remove('running');
+                stopCampaignBtn.style.display = 'none';
+                stopCampaignBtn.disabled = false;
+            }} else if (isError) {{
+                massEmailBtn.innerText = '⚠️ Campaign Failed — Retry';
+                massEmailBtn.classList.remove('running');
+                stopCampaignBtn.style.display = 'none';
+            }}
+        }}
+    }} catch (e) {{
+        console.log('Mass email poll failed', e);
+    }}
+}}
+
+setInterval(pollMassEmailStatus, 3000);
+pollMassEmailStatus();
 
 // CONFIG MODAL HANDLER
 const configBtn = document.getElementById('config-btn');
@@ -499,6 +692,226 @@ async function pollStatus() {{
 // Poll every 3 seconds
 setInterval(pollStatus, 3000);
 pollStatus();
+
+// ── EMAIL COMPOSE MODAL ──────────────────────────────────────
+const emailOverlay = document.getElementById('email-modal-overlay');
+const emailModalBody = document.getElementById('email-modal-body');
+const emailModalClose = document.getElementById('email-modal-close');
+const emailModalProfName = document.getElementById('email-modal-prof-name');
+const emailModalTo = document.getElementById('email-modal-to');
+const emailToast = document.getElementById('email-toast');
+
+let currentProfEmail = '';
+
+function openEmailModal(btn) {{
+    const prof = JSON.parse(btn.dataset.prof || '{{}}');
+    currentProfEmail = prof.email || '';
+    
+    emailModalProfName.textContent = '✍️ ' + (prof.name || 'Professor');
+    emailModalTo.textContent = prof.email ? 'To: ' + prof.email + ' · ' + prof.university : prof.university || '';
+    
+    // Show loading state
+    emailModalBody.innerHTML = `
+        <div class="email-generating">
+            <div class="email-spinner"></div>
+            <div class="email-spinner-text">
+                <strong>Gemini is writing your email...</strong>
+                Analyzing ${{prof.name}}'s research profile and crafting a personalized message
+            </div>
+        </div>
+    `;
+    
+    emailOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    generateEmail(prof);
+}}
+
+async function generateEmail(prof) {{
+    try {{
+        const response = await fetch('/generate_email', {{
+            method: 'POST',
+            headers: {{ 'Content-Type': 'application/json' }},
+            body: JSON.stringify(prof)
+        }});
+        
+        const data = await response.json();
+        
+        if (data.status === 'error') {{
+            showEmailError(data.message);
+            return;
+        }}
+        
+        showEmailForm(data.subject, data.body, prof.email);
+        
+    }} catch (err) {{
+        showEmailError('Network error: ' + err.message + '. Make sure app.py is running on port 8000.');
+    }}
+}}
+
+function showEmailForm(subject, body, toEmail) {{
+    emailModalBody.innerHTML = `
+        <div class="email-form">
+            <div>
+                <span class="email-field-label">Subject</span>
+                <input type="text" class="email-subject-input" id="email-subject-field" value="${{escHtml(subject)}}">
+            </div>
+            <div>
+                <span class="email-field-label">Email Body — Edit freely before sending</span>
+                <textarea class="email-body-input" id="email-body-field">${{escHtml(body)}}</textarea>
+            </div>
+            <div class="email-modal-actions">
+                <button class="btn-send" onclick="sendViaSMTP()" id="btn-send-smtp">📤 Send Now (SMTP)</button>
+                <button class="btn-copy" onclick="sendViaMailto()">📧 Open in Email Client</button>
+                <button class="btn-copy" onclick="copyEmail()" style="background:rgba(255,255,255,0.06);color:var(--text2);border:1px solid var(--border);">📋 Copy</button>
+                <button class="btn-regenerate" onclick="regenerateEmail()">🔄 Regenerate</button>
+            </div>
+        </div>
+    `;
+}}
+
+function showEmailError(msg) {{
+    emailModalBody.innerHTML = `
+        <div class="email-error">
+            <strong>⚠️ Could not generate email</strong><br><br>
+            ${{msg}}<br><br>
+            Make sure the AdvisorScout server (app.py) is running and the DEEPSEEK_API_KEY is set function sendViaMailto() {{
+    const subject = encodeURIComponent(document.getElementById('email-subject-field')?.value || '');
+    const body = encodeURIComponent(document.getElementById('email-body-field')?.value || '');
+    
+    // mailto has URL length limits — try to open, fall back to clipboard notice
+    const mailtoUrl = `mailto:${{currentProfEmail}}?subject=${{subject}}&body=${{body}}`;
+    
+    if (mailtoUrl.length > 2000) {{
+        // Body too long for mailto — copy instead and open blank mailto
+        copyEmail();
+        if (currentProfEmail) {{
+            window.open(`mailto:${{currentProfEmail}}?subject=${{subject}}`, '_blank');
+        }}
+        showToast('📋 Body copied! Subject pre-filled in email client.');
+    }} else {{
+        window.open(mailtoUrl, '_blank');
+        showToast('📤 Opened in your email client!');
+    }}
+}}
+
+function copyEmail() {{
+    const subject = document.getElementById('email-subject-field')?.value || '';
+    const body = document.getElementById('email-body-field')?.value || '';
+    const full = `Subject: ${{subject}}\n\n${{body}}`;
+    
+    navigator.clipboard.writeText(full).then(() => {{
+        showToast('✅ Email copied to clipboard!');
+    }}).catch(() => {{
+        const ta = document.createElement('textarea');
+        ta.value = full;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('✅ Email copied to clipboard!');
+    }});
+}}
+
+async function sendViaSMTP() {{
+    const subject = document.getElementById('email-subject-field')?.value || '';
+    const body = document.getElementById('email-body-field')?.value || '';
+    const toEmail = currentProfEmail;
+    
+    if (!toEmail) {{
+        showToast('⚠️ No recipient email found for this professor.');
+        return;
+    }}
+    
+    const btn = document.getElementById('btn-send-smtp');
+    if (btn) {{ btn.textContent = '⌛ Sending...'; btn.disabled = true; }}
+    
+    try {{
+        const res = await fetch('/send_email_now', {{
+            method: 'POST',
+            headers: {{ 'Content-Type': 'application/json' }},
+            body: JSON.stringify({{ to_email: toEmail, subject: subject, body: body }})
+        }});
+        const data = await res.json();
+        if (data.status === 'sent') {{
+            showToast('✅ Email sent to ' + data.to + '!');
+            closeEmailModal();
+        }} else {{
+            showToast('⚠️ Failed: ' + (data.message || 'Unknown error'));
+            if (btn) {{ btn.textContent = '📤 Send Now (SMTP)'; btn.disabled = false; }}
+        }}
+    }} catch (e) {{
+        showToast('⚠️ Network error: ' + e.message);
+        if (btn) {{ btn.textContent = '📤 Send Now (SMTP)'; btn.disabled = false; }}
+    }}
+}}
+            showToast('⚠️ Failed: ' + (data.message || 'Unknown error'));
+            if (btn) { btn.textContent = '📤 Send Now (SMTP)'; btn.disabled = false; }
+        }
+    } catch (e) {
+        showToast('⚠️ Network error: ' + e.message);
+    }});
+}}
+
+let _lastProfData = null;
+function openEmailModal(btn) {{
+    const prof = JSON.parse(btn.dataset.prof.replace(/&quot;/g, '"') || '{{}}');
+    _lastProfData = prof;
+    currentProfEmail = prof.email || '';
+    
+    emailModalProfName.textContent = '✍️ ' + (prof.name || 'Professor');
+    emailModalTo.textContent = prof.email ? 'To: ' + prof.email + ' · ' + prof.university : prof.university || '';
+    
+    emailModalBody.innerHTML = `
+        <div class="email-generating">
+            <div class="email-spinner"></div>
+            <div class="email-spinner-text">
+                <strong>DeepSeek AI is writing your email...</strong>
+                Analyzing ${{prof.name}}'s research and crafting a personalized message
+            </div>
+        </div>
+    `;
+    
+    emailOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    generateEmail(prof);
+}}
+
+function regenerateEmail() {{
+    if (_lastProfData) {{
+        emailModalBody.innerHTML = `
+            <div class="email-generating">
+                <div class="email-spinner"></div>
+                <div class="email-spinner-text">
+                    <strong>Generating a fresh version...</strong>
+                    Using a slightly different approach
+                </div>
+            </div>
+        `;
+        generateEmail(_lastProfData);
+    }}
+}}
+
+function closeEmailModal() {{
+    emailOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}}
+
+function showToast(msg) {{
+    emailToast.textContent = msg;
+    emailToast.classList.add('show');
+    setTimeout(() => emailToast.classList.remove('show'), 3000);
+}}
+
+function escHtml(str) {{
+    if (!str) return '';
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}}
+
+emailModalClose.addEventListener('click', closeEmailModal);
+emailOverlay.addEventListener('click', (e) => {{ if (e.target === emailOverlay) closeEmailModal(); }});
+document.addEventListener('keydown', (e) => {{ if (e.key === 'Escape') closeEmailModal(); }});
 
 </script></body></html>'''
 
